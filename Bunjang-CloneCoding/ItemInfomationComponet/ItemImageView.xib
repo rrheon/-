@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemImageView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
+            <connections>
+                <outlet property="itemImageView" destination="cmu-xu-6Sw" id="gA7-L8-uHJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-xu-6Sw">
+                    <rect key="frame" x="0.0" y="0.0" width="165" height="178"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIy-wm-Ons">
+                    <rect key="frame" x="131" y="10" width="24" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="qgO-3o-yRs"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="x.circle" catalog="system"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGK-Jm-U13">
+                    <rect key="frame" x="10" y="154" width="30" height="14"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="1cl-KX-IKF"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="wand.and.rays" catalog="system"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="top" secondItem="cmu-xu-6Sw" secondAttribute="top" id="1xr-Ue-xEZ"/>
+                <constraint firstItem="PIy-wm-Ons" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="2cJ-dO-P4Y"/>
+                <constraint firstAttribute="leading" secondItem="cmu-xu-6Sw" secondAttribute="leading" id="34O-jL-UgA"/>
+                <constraint firstAttribute="bottom" secondItem="cmu-xu-6Sw" secondAttribute="bottom" id="Aih-qd-iqR"/>
+                <constraint firstItem="PIy-wm-Ons" firstAttribute="trailing" secondItem="cmu-xu-6Sw" secondAttribute="trailing" constant="-10" id="DvD-jK-tIE"/>
+                <constraint firstItem="cmu-xu-6Sw" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="GIE-2o-MBx"/>
+                <constraint firstItem="BGK-Jm-U13" firstAttribute="leading" secondItem="cmu-xu-6Sw" secondAttribute="leading" constant="10" id="LDM-UK-EYi"/>
+                <constraint firstItem="BGK-Jm-U13" firstAttribute="bottom" secondItem="cmu-xu-6Sw" secondAttribute="bottom" constant="-10" id="Zmd-z9-bEf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-173.2824427480916" y="-216.90140845070422"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wand.and.rays" catalog="system" width="128" height="123"/>
+        <image name="x.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
