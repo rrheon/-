@@ -17,13 +17,13 @@
             <rect key="frame" x="0.0" y="0.0" width="165" height="178"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-xu-6Sw">
-                    <rect key="frame" x="0.0" y="0.0" width="165" height="178"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-xu-6Sw">
+                    <rect key="frame" x="0.0" y="-2.3333333333333286" width="165" height="180"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIy-wm-Ons">
-                    <rect key="frame" x="131" y="10" width="24" height="14"/>
+                    <rect key="frame" x="135" y="0.0" width="20" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="24" id="qgO-3o-yRs"/>
+                        <constraint firstAttribute="width" constant="20" id="qgO-3o-yRs"/>
                     </constraints>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
@@ -32,10 +32,11 @@
                     </buttonConfiguration>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGK-Jm-U13">
-                    <rect key="frame" x="10" y="154" width="30" height="14"/>
+                    <rect key="frame" x="10" y="158" width="20" height="20"/>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="1cl-KX-IKF"/>
+                        <constraint firstAttribute="width" constant="20" id="1cl-KX-IKF"/>
+                        <constraint firstAttribute="height" constant="20" id="TvF-M0-Tst"/>
                     </constraints>
                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
@@ -47,19 +48,20 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="top" secondItem="cmu-xu-6Sw" secondAttribute="top" id="1xr-Ue-xEZ"/>
-                <constraint firstItem="PIy-wm-Ons" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="2cJ-dO-P4Y"/>
+                <constraint firstItem="PIy-wm-Ons" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2cJ-dO-P4Y"/>
                 <constraint firstAttribute="leading" secondItem="cmu-xu-6Sw" secondAttribute="leading" id="34O-jL-UgA"/>
                 <constraint firstAttribute="bottom" secondItem="cmu-xu-6Sw" secondAttribute="bottom" id="Aih-qd-iqR"/>
                 <constraint firstItem="PIy-wm-Ons" firstAttribute="trailing" secondItem="cmu-xu-6Sw" secondAttribute="trailing" constant="-10" id="DvD-jK-tIE"/>
                 <constraint firstItem="cmu-xu-6Sw" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="GIE-2o-MBx"/>
                 <constraint firstItem="BGK-Jm-U13" firstAttribute="leading" secondItem="cmu-xu-6Sw" secondAttribute="leading" constant="10" id="LDM-UK-EYi"/>
-                <constraint firstItem="BGK-Jm-U13" firstAttribute="bottom" secondItem="cmu-xu-6Sw" secondAttribute="bottom" constant="-10" id="Zmd-z9-bEf"/>
+                <constraint firstItem="BGK-Jm-U13" firstAttribute="bottom" secondItem="cmu-xu-6Sw" secondAttribute="bottom" id="Zmd-z9-bEf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-173.2824427480916" y="-216.90140845070422"/>
         </view>
     </objects>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="wand.and.rays" catalog="system" width="128" height="123"/>
         <image name="x.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

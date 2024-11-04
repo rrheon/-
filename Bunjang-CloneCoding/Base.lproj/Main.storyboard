@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oSm-dG-yDj">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bunjang_CloneCoding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-c8-nAW">
+                                <rect key="frame" x="0.0" y="103" width="393" height="1097"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="noJ-Jv-cbf" userLabel="containerStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1191"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-i1-NJH" customClass="ItemInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="20" width="377" height="420"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="420" id="Lpn-E5-m14"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGf-Er-ncr" customClass="ItemPriceView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="469" width="377" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="a9Y-s3-GNg"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx2-Vk-R5P" customClass="DeliveryMethodView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="626" width="377" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="0Iu-ko-FyX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="697-dF-4qz" customClass="AdditionalInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="783" width="377" height="400"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="0tL-wE-v0j"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="noJ-Jv-cbf" firstAttribute="top" secondItem="w9f-mQ-Uv1" secondAttribute="top" id="28L-6T-XI5"/>
+                                    <constraint firstItem="noJ-Jv-cbf" firstAttribute="trailing" secondItem="w9f-mQ-Uv1" secondAttribute="trailing" id="G0A-cg-k5H"/>
+                                    <constraint firstItem="noJ-Jv-cbf" firstAttribute="bottom" secondItem="w9f-mQ-Uv1" secondAttribute="bottom" id="UEA-rn-67W"/>
+                                    <constraint firstItem="noJ-Jv-cbf" firstAttribute="width" secondItem="wqR-IB-aw6" secondAttribute="width" id="YRZ-sv-GZf"/>
+                                    <constraint firstItem="noJ-Jv-cbf" firstAttribute="leading" secondItem="w9f-mQ-Uv1" secondAttribute="leading" id="zwj-hN-9ui"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="w9f-mQ-Uv1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wqR-IB-aw6"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hFY-c8-nAW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="8re-N6-fUF"/>
+                            <constraint firstAttribute="leading" secondItem="hFY-c8-nAW" secondAttribute="leading" id="B6A-Vd-aPl"/>
+                            <constraint firstItem="hFY-c8-nAW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LKR-xq-eAl"/>
+                            <constraint firstItem="hFY-c8-nAW" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="jlp-3k-I7S"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zt8-yM-iQp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Nv0-7Z-QQd">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="393" height="1200"/>
+                    <connections>
+                        <outlet property="itemInfomationView" destination="jea-i1-NJH" id="bPo-Uq-eh5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="820.61068702290072" y="4.9295774647887329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VTz-UQ-p4l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oSm-dG-yDj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aNU-jo-Ozq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IvZ-42-HQu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cF2-Dk-wZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106.10687022900763" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

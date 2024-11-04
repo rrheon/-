@@ -11,10 +11,18 @@ final class ItemImageView: CustomView {
   
   @IBOutlet weak var itemImageView: UIImageView!
   
+  
+  var imageName: String = "" {
+    didSet {
+      DispatchQueue.main.async {
+        self.itemImageView.image = UIImage(systemName: self.imageName)
+      }
+    }
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     print(#fileID, #function, #line," - ")
-    applyNib()
   }
   
   override init(frame: CGRect) {
@@ -22,13 +30,13 @@ final class ItemImageView: CustomView {
     print(#fileID, #function, #line," - ")
   }
   
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    print(#fileID, #function, #line," - ")
-  }
-  
   convenience init(imageName: String){
     self.init(frame: .zero)
-    self.itemImageView.image = UIImage(systemName: imageName)
+    self.imageName = imageName
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    fatalError("init(coder:) has not been implemented")
   }
 }
