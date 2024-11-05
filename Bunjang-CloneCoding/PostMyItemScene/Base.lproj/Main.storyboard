@@ -19,39 +19,39 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-c8-nAW">
                                 <rect key="frame" x="0.0" y="103" width="393" height="1097"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="noJ-Jv-cbf" userLabel="containerStackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1191"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="noJ-Jv-cbf" userLabel="containerStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1603"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-i1-NJH" customClass="ItemInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="20" width="377" height="420"/>
+                                                <rect key="frame" x="0.0" y="20" width="393" height="650"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="420" id="Lpn-E5-m14"/>
+                                                    <constraint firstAttribute="height" constant="650" id="Lpn-E5-m14"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGf-Er-ncr" customClass="ItemPriceView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="469" width="377" height="128"/>
+                                                <rect key="frame" x="0.0" y="675" width="393" height="210"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="a9Y-s3-GNg"/>
+                                                    <constraint firstAttribute="height" constant="210" id="vPD-PU-nJe"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx2-Vk-R5P" customClass="DeliveryMethodView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="626" width="377" height="128"/>
+                                                <rect key="frame" x="0.0" y="890" width="393" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="0Iu-ko-FyX"/>
+                                                    <constraint firstAttribute="height" constant="300" id="0Iu-ko-FyX"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="697-dF-4qz" customClass="AdditionalInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="783" width="377" height="400"/>
+                                                <rect key="frame" x="0.0" y="1195" width="393" height="400"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="0tL-wE-v0j"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <edgeInsets key="layoutMargins" top="20" left="8" bottom="8" right="8"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="0.0" bottom="8" right="0.0"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -82,6 +82,8 @@
                     <size key="freeformSize" width="393" height="1200"/>
                     <connections>
                         <outlet property="itemInfomationView" destination="jea-i1-NJH" id="bPo-Uq-eh5"/>
+                        <outlet property="itemInfomationViewHeightAnchor" destination="Lpn-E5-m14" id="cam-l8-edy"/>
+                        <outlet property="scrollView" destination="hFY-c8-nAW" id="0vy-JN-DOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

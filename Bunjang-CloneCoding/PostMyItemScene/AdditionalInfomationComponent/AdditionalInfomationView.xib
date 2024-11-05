@@ -26,8 +26,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i9e-4E-xcg">
-                    <rect key="frame" x="225" y="84.333333333333329" width="158" height="34.333333333333329"/>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9e-4E-xcg">
+                    <rect key="frame" x="245" y="84.333333333333329" width="138" height="34.333333333333329"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgp-vw-rvt">
                             <rect key="frame" x="0.0" y="0.0" width="69" height="34.333333333333336"/>
@@ -45,7 +45,7 @@
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuP-YC-HLz">
-                            <rect key="frame" x="89" y="0.0" width="69" height="34.333333333333336"/>
+                            <rect key="frame" x="69" y="0.0" width="69" height="34.333333333333336"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
                                 <backgroundConfiguration key="background"/>
@@ -87,6 +87,14 @@
                                 </attributedString>
                                 <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWE-H5-35e">
                             <rect key="frame" x="333.33333333333331" y="0.0" width="39.666666666666686" height="34.333333333333336"/>
@@ -102,6 +110,17 @@
                     <constraints>
                         <constraint firstItem="fWE-H5-35e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Lp-N1-ha9" secondAttribute="trailing" constant="10" id="v5h-DC-EQW"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-0U-0yl">
                     <rect key="frame" x="242" y="219" width="141" height="34.333333333333343"/>
@@ -129,6 +148,17 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="141" id="7nh-Ft-rFj"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWO-Lw-pHo">
                     <rect key="frame" x="10" y="198" width="373" height="1"/>
@@ -137,15 +167,15 @@
                         <constraint firstAttribute="height" constant="1" id="z9B-5B-TQr"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안전하고 건전한 거래 환경을 위해 과학기술정보통신부, 한국인터넷진흥원과 번개장터(주)가 함께함니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp0-WU-hoY">
-                    <rect key="frame" x="10" y="352" width="373" height="40.666666666666686"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안전하고 건전한 거래 환경을 위해 과학기술정보통신부, 한국인터넷진흥원과 번개장터(주)가 함께함니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp0-WU-hoY">
+                    <rect key="frame" x="10" y="289.33333333333331" width="373" height="40.666666666666686"/>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-I0-WFN">
-                    <rect key="frame" x="10" y="411.66666666666669" width="373" height="50"/>
+                    <rect key="frame" x="10" y="349" width="373" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="SJI-Tw-Myf"/>
                     </constraints>
@@ -157,7 +187,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="wp0-WU-hoY" firstAttribute="top" secondItem="rhN-qx-GbQ" secondAttribute="bottom" constant="112.66666666666666" id="0e4-DE-d5v"/>
+                <constraint firstItem="wp0-WU-hoY" firstAttribute="top" secondItem="rhN-qx-GbQ" secondAttribute="bottom" constant="50" id="0e4-DE-d5v"/>
                 <constraint firstItem="404-Zo-9UE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="3rI-pW-PBn"/>
                 <constraint firstItem="n8F-0U-0yl" firstAttribute="top" secondItem="ZWO-Lw-pHo" secondAttribute="bottom" constant="20" id="88p-1c-LzJ"/>
                 <constraint firstItem="rhN-qx-GbQ" firstAttribute="top" secondItem="ZWO-Lw-pHo" secondAttribute="bottom" constant="20" id="AV9-7Q-j5U"/>
@@ -196,10 +226,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

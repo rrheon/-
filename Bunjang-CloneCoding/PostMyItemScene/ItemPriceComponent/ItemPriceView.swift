@@ -1,5 +1,5 @@
 //
-//  DeliveryMethodView.swift
+//  ItemPriceView.swift
 //  Bunjang-CloneCoding
 //
 //  Created by 최용헌 on 11/4/24.
@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class DeliveryMethodView: CustomView {
+final class ItemPriceView: CustomView {
   override func awakeFromNib() {
     super.awakeFromNib()
-    applyNib()
   }
   
   override init(frame: CGRect) {

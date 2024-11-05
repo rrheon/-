@@ -16,6 +16,9 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5c-up-MNZ">
                     <rect key="frame" x="10.000000000000002" y="49" width="29.666666666666671" height="20.333333333333329"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.333333333333329" id="arQ-L5-MJY"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -67,6 +70,9 @@
                             </buttonConfiguration>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34.333333333333343" id="iIG-kf-biu"/>
+                    </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zl5-no-Pxd">
                     <rect key="frame" x="0.0" y="256.66666666666669" width="466" height="10"/>
@@ -77,8 +83,16 @@
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="₩ 가격" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-Ed-XpW">
                     <rect key="frame" x="10" y="89.333333333333329" width="446" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="ncm-bB-sgh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UqT-eK-lIW">
                     <rect key="frame" x="10" y="133.33333333333334" width="175" height="28.666666666666657"/>
@@ -107,21 +121,24 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="Re3-ZN-rTn" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1ez-ZX-Ei5" secondAttribute="trailing" constant="10" id="cEU-Bd-upd"/>
+                        <constraint firstAttribute="height" constant="28.666666666666657" id="m5u-Ap-xQA"/>
                     </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I5c-up-MNZ" secondAttribute="trailing" constant="10" id="3zY-mk-3xY"/>
                 <constraint firstItem="4qS-xc-Ylh" firstAttribute="bottom" secondItem="Zl5-no-Pxd" secondAttribute="bottom" constant="-20" id="56w-4J-76X"/>
                 <constraint firstItem="Zl5-no-Pxd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5P5-ID-Yrk"/>
                 <constraint firstItem="4qS-xc-Ylh" firstAttribute="top" secondItem="HEu-Aq-u4D" secondAttribute="bottom" constant="8.6666666666666572" id="8Di-g2-ufW"/>
                 <constraint firstItem="HEu-Aq-u4D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="8F9-Xb-Vkl"/>
-                <constraint firstItem="HEu-Aq-u4D" firstAttribute="top" secondItem="WwM-Ed-XpW" secondAttribute="bottom" constant="60" id="ABR-4g-4cm"/>
                 <constraint firstItem="UqT-eK-lIW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="C0g-EX-gg2"/>
                 <constraint firstItem="WwM-Ed-XpW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ERn-AO-Xwa"/>
+                <constraint firstItem="HEu-Aq-u4D" firstAttribute="top" secondItem="UqT-eK-lIW" secondAttribute="bottom" constant="21.333333333333314" id="QEd-6q-F3K"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="I5c-up-MNZ" secondAttribute="top" constant="10" id="QZo-ee-Czq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WwM-Ed-XpW" secondAttribute="trailing" constant="10" id="hx9-1s-lKI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HEu-Aq-u4D" secondAttribute="trailing" constant="10" id="lIh-rY-Kmb"/>
                 <constraint firstItem="UqT-eK-lIW" firstAttribute="top" secondItem="WwM-Ed-XpW" secondAttribute="bottom" constant="10" id="nOG-4B-Or5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UqT-eK-lIW" secondAttribute="trailing" constant="10" id="oSo-Qa-BbZ"/>
                 <constraint firstItem="4qS-xc-Ylh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="oZb-jN-cdE"/>
