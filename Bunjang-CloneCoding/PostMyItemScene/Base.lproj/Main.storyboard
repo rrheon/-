@@ -20,31 +20,31 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="1097"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="noJ-Jv-cbf" userLabel="containerStackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1453"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jea-i1-NJH" customClass="ItemInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="20" width="393" height="650"/>
+                                                <rect key="frame" x="0.0" y="20" width="393" height="500"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="650" id="Lpn-E5-m14"/>
+                                                    <constraint firstAttribute="height" constant="500" id="Lpn-E5-m14"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGf-Er-ncr" customClass="ItemPriceView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="675" width="393" height="210"/>
+                                                <rect key="frame" x="0.0" y="525" width="393" height="210"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="210" id="vPD-PU-nJe"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx2-Vk-R5P" customClass="DeliveryMethodView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="890" width="393" height="300"/>
+                                                <rect key="frame" x="0.0" y="740" width="393" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="0Iu-ko-FyX"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="697-dF-4qz" customClass="AdditionalInfomationView" customModule="Bunjang_CloneCoding" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1195" width="393" height="400"/>
+                                                <rect key="frame" x="0.0" y="1045" width="393" height="400"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="400" id="0tL-wE-v0j"/>
@@ -84,11 +84,33 @@
                         <outlet property="itemInfomationView" destination="jea-i1-NJH" id="bPo-Uq-eh5"/>
                         <outlet property="itemInfomationViewHeightAnchor" destination="Lpn-E5-m14" id="cam-l8-edy"/>
                         <outlet property="scrollView" destination="hFY-c8-nAW" id="0vy-JN-DOS"/>
+                        <segue destination="7PV-Kt-kli" kind="show" identifier="ExceptionItemListVC" id="i2C-5z-Fgf"/>
+                        <segue destination="APF-Cs-M4Q" kind="show" identifier="navToSeletCategoryVC" id="SL2-kU-w9I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820.61068702290072" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="799" y="5"/>
+        </scene>
+        <!--ExceptionItemListViewController-->
+        <scene sceneID="Ndz-9i-xKk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ExceptionItemListVC" storyboardName="ExceptionItemListViewController" id="7PV-Kt-kli" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T7A-aj-2L6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwe-u3-i4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1619" y="-111"/>
+        </scene>
+        <!--SelectCategoryViewController-->
+        <scene sceneID="493-At-03t">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SelectCategoryViewController" storyboardName="SelectCategoryViewController" id="APF-Cs-M4Q" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SSy-ah-BeB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpu-Av-xxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VTz-UQ-p4l">

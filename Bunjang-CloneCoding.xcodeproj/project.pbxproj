@@ -11,10 +11,17 @@
 		EE1ADF102CD90C3C0011C288 /* ItemCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1ADF0F2CD90C3C0011C288 /* ItemCategoryView.xib */; };
 		EE1ADF122CD9B6300011C288 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADF112CD9B6300011C288 /* UIButton+Ext.swift */; };
 		EE1ADF182CD9F77D0011C288 /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADF172CD9F77D0011C288 /* KeyboardToolbar.swift */; };
+		EE3F90D92CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3F90D82CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard */; };
+		EE3F90DB2CDA6D8000DDF011 /* ExceptionItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F90DA2CDA6D8000DDF011 /* ExceptionItemListViewController.swift */; };
+		EE3F90DE2CDB463100DDF011 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F90DD2CDB463100DDF011 /* SelectCategoryViewController.swift */; };
+		EE3F90E02CDB46C200DDF011 /* SelectCategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3F90DF2CDB46C200DDF011 /* SelectCategoryViewController.storyboard */; };
 		EE539C162CD8AE4D00F70CC0 /* DeliveryMethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE539C152CD8AE4D00F70CC0 /* DeliveryMethodView.xib */; };
 		EE539C182CD8AE5300F70CC0 /* DeliveryMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE539C172CD8AE5300F70CC0 /* DeliveryMethodView.swift */; };
 		EE539C1B2CD8B2D300F70CC0 /* AdditionalInfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE539C1A2CD8B2D300F70CC0 /* AdditionalInfomationView.xib */; };
 		EE539C1D2CD8B2E700F70CC0 /* AdditionalInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE539C1C2CD8B2E700F70CC0 /* AdditionalInfomationView.swift */; };
+		EEA99FA72CDB66F7008411C2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FA62CDB66F7008411C2 /* ViewModel.swift */; };
+		EEA99FAA2CDBB602008411C2 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA99FA92CDBB602008411C2 /* PopupView.xib */; };
+		EEA99FAC2CDBB618008411C2 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FAB2CDBB618008411C2 /* PopupView.swift */; };
 		EEB535702CD632EC00FDA96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5356F2CD632EC00FDA96A /* AppDelegate.swift */; };
 		EEB535722CD632EC00FDA96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB535712CD632EC00FDA96A /* SceneDelegate.swift */; };
 		EEB535742CD632EC00FDA96A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB535732CD632EC00FDA96A /* ViewController.swift */; };
@@ -36,10 +43,17 @@
 		EE1ADF0F2CD90C3C0011C288 /* ItemCategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryView.xib; sourceTree = "<group>"; };
 		EE1ADF112CD9B6300011C288 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		EE1ADF172CD9F77D0011C288 /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
+		EE3F90D82CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExceptionItemListViewController.storyboard; sourceTree = "<group>"; };
+		EE3F90DA2CDA6D8000DDF011 /* ExceptionItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionItemListViewController.swift; sourceTree = "<group>"; };
+		EE3F90DD2CDB463100DDF011 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
+		EE3F90DF2CDB46C200DDF011 /* SelectCategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCategoryViewController.storyboard; sourceTree = "<group>"; };
 		EE539C152CD8AE4D00F70CC0 /* DeliveryMethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMethodView.xib; sourceTree = "<group>"; };
 		EE539C172CD8AE5300F70CC0 /* DeliveryMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodView.swift; sourceTree = "<group>"; };
 		EE539C1A2CD8B2D300F70CC0 /* AdditionalInfomationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalInfomationView.xib; sourceTree = "<group>"; };
 		EE539C1C2CD8B2E700F70CC0 /* AdditionalInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfomationView.swift; sourceTree = "<group>"; };
+		EEA99FA62CDB66F7008411C2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EEA99FA92CDBB602008411C2 /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		EEA99FAB2CDBB618008411C2 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		EEB5356C2CD632EC00FDA96A /* Bunjang-CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunjang-CloneCoding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB5356F2CD632EC00FDA96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB535712CD632EC00FDA96A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,12 +97,31 @@
 			children = (
 				EEB535752CD632EC00FDA96A /* Main.storyboard */,
 				EEB535732CD632EC00FDA96A /* ViewController.swift */,
+				EE3F90DC2CDB45DE00DDF011 /* PostMyItemSceneComponent */,
+				EE3F90D72CDA6CF100DDF011 /* ExceptionItemListScene */,
+				EEA99FA82CDB674A008411C2 /* SelectCategoryScene */,
+			);
+			path = PostMyItemScene;
+			sourceTree = "<group>";
+		};
+		EE3F90D72CDA6CF100DDF011 /* ExceptionItemListScene */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F90D82CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard */,
+				EE3F90DA2CDA6D8000DDF011 /* ExceptionItemListViewController.swift */,
+			);
+			path = ExceptionItemListScene;
+			sourceTree = "<group>";
+		};
+		EE3F90DC2CDB45DE00DDF011 /* PostMyItemSceneComponent */ = {
+			isa = PBXGroup;
+			children = (
 				EEB5358D2CD66CAD00FDA96A /* ItemInfomationComponet */,
 				EEB535952CD8A0F800FDA96A /* ItemPriceComponent */,
 				EE539C142CD8ACB100F70CC0 /* DeliveryMethodComponent */,
 				EE539C192CD8B2B600F70CC0 /* AdditionalInfomationComponent */,
 			);
-			path = PostMyItemScene;
+			path = PostMyItemSceneComponent;
 			sourceTree = "<group>";
 		};
 		EE539C142CD8ACB100F70CC0 /* DeliveryMethodComponent */ = {
@@ -107,6 +140,15 @@
 				EE539C1C2CD8B2E700F70CC0 /* AdditionalInfomationView.swift */,
 			);
 			path = AdditionalInfomationComponent;
+			sourceTree = "<group>";
+		};
+		EEA99FA82CDB674A008411C2 /* SelectCategoryScene */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F90DD2CDB463100DDF011 /* SelectCategoryViewController.swift */,
+				EE3F90DF2CDB46C200DDF011 /* SelectCategoryViewController.storyboard */,
+			);
+			path = SelectCategoryScene;
 			sourceTree = "<group>";
 		};
 		EEB535632CD632EC00FDA96A = {
@@ -132,7 +174,10 @@
 				EEB535712CD632EC00FDA96A /* SceneDelegate.swift */,
 				EEB5358B2CD6463500FDA96A /* CustomView.swift */,
 				EE1ADF172CD9F77D0011C288 /* KeyboardToolbar.swift */,
+				EEA99FA62CDB66F7008411C2 /* ViewModel.swift */,
 				EE1ADF142CD9BFDE0011C288 /* PostMyItemScene */,
+				EEA99FA92CDBB602008411C2 /* PopupView.xib */,
+				EEA99FAB2CDBB618008411C2 /* PopupView.swift */,
 				EE1ADF132CD9BFCD0011C288 /* Extension */,
 				EEB535782CD632EE00FDA96A /* Assets.xcassets */,
 				EEB5357A2CD632EE00FDA96A /* LaunchScreen.storyboard */,
@@ -221,13 +266,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3F90E02CDB46C200DDF011 /* SelectCategoryViewController.storyboard in Resources */,
 				EEB535792CD632EE00FDA96A /* Assets.xcassets in Resources */,
 				EEB5357C2CD632EE00FDA96A /* Base in Resources */,
 				EEB535972CD8A12100FDA96A /* ItemPriceView.xib in Resources */,
 				EEB535772CD632EC00FDA96A /* Base in Resources */,
+				EE3F90D92CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard in Resources */,
 				EE539C162CD8AE4D00F70CC0 /* DeliveryMethodView.xib in Resources */,
 				EE539C1B2CD8B2D300F70CC0 /* AdditionalInfomationView.xib in Resources */,
 				EE1ADF102CD90C3C0011C288 /* ItemCategoryView.xib in Resources */,
+				EEA99FAA2CDBB602008411C2 /* PopupView.xib in Resources */,
 				EEB5358F2CD66CE000FDA96A /* ItemInfomationView.xib in Resources */,
 				EEB535842CD640AA00FDA96A /* ItemImageView.xib in Resources */,
 			);
@@ -242,11 +290,15 @@
 			files = (
 				EE1ADF0E2CD90C300011C288 /* ItemCategoryView.swift in Sources */,
 				EEB535742CD632EC00FDA96A /* ViewController.swift in Sources */,
+				EE3F90DE2CDB463100DDF011 /* SelectCategoryViewController.swift in Sources */,
 				EE539C1D2CD8B2E700F70CC0 /* AdditionalInfomationView.swift in Sources */,
 				EEB535912CD66CED00FDA96A /* ItemInfomationView.swift in Sources */,
 				EEB535702CD632EC00FDA96A /* AppDelegate.swift in Sources */,
+				EEA99FA72CDB66F7008411C2 /* ViewModel.swift in Sources */,
+				EE3F90DB2CDA6D8000DDF011 /* ExceptionItemListViewController.swift in Sources */,
 				EEB535992CD8A13400FDA96A /* ItemPriceView.swift in Sources */,
 				EEB5358C2CD6463500FDA96A /* CustomView.swift in Sources */,
+				EEA99FAC2CDBB618008411C2 /* PopupView.swift in Sources */,
 				EEB535942CD6FE4200FDA96A /* UIView+Ext.swift in Sources */,
 				EEB535722CD632EC00FDA96A /* SceneDelegate.swift in Sources */,
 				EE539C182CD8AE5300F70CC0 /* DeliveryMethodView.swift in Sources */,

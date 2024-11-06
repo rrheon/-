@@ -7,22 +7,25 @@
 
 import UIKit
 
-protocol ItemInfomationViewDelegate: Any {
+protocol ItemInfomationViewDelegate {
   func updateViewConstraint(height: CGFloat)
-
+  func navToExceptionItemListVC(sender: UIButton)
+  func navToSelectCategoryVC(sender: UIButton)
 }
 
 final class ItemInfomationView: CustomView {
   var delegate: ItemInfomationViewDelegate?
   
+  let viewModel = ViewModel.shared
+  
   @IBOutlet weak var itemImageOrVideoStackView: UIStackView!
   @IBOutlet weak var addItemImageOrVideoButton: UIButton!
   
   @IBOutlet weak var itemNameTextField: UITextField!
+  @IBOutlet weak var itemNameLabelUnderLineView: UIView!
   
   @IBOutlet weak var autoSelectCategoryView: ItemCategoryView!
   @IBOutlet weak var selectCategoryTopAnchor: NSLayoutConstraint!
-  @IBOutlet weak var categoryButton: UIButton!
   @IBOutlet weak var categoryLabel: UILabel!
   
   @IBOutlet weak var itemDescriptionTextView: UITextView!
@@ -34,6 +37,9 @@ final class ItemInfomationView: CustomView {
     button.setTitleColor(.gray, for: .normal)
     button.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
     button.tintColor = .gray
+    button.addAction(UIAction { _ in
+      self.delegate?.navToExceptionItemListVC(sender: button)
+    }, for: .touchUpInside)
     return button
   }()
   
@@ -47,7 +53,12 @@ final class ItemInfomationView: CustomView {
     return button
   }()
   
-  @IBOutlet weak var underLine: UIView!
+  @IBOutlet weak var itemStautsView: UIView!
+  @IBOutlet weak var itemSizeView: UIView!
+  
+  // 상품상태, 사이즈가 있을 때 100 없을 때 20?
+  @IBOutlet weak var describLabelTopAnchor: NSLayoutConstraint!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -56,11 +67,12 @@ final class ItemInfomationView: CustomView {
       addItemImageOrVideoButton.widthAnchor.constraint(equalToConstant: 75)
     ])
     
-    addUnderLine()
     addButtonActions()
     
     autoSelectCategoryView.isHidden = true
     selectCategoryTopAnchor.constant = 20
+    
+    setupCategoryUI(hidden: true, topAnchor: 20, viewHeight: 500)
     
     itemNameTextField.autocorrectionType = .no
     itemNameTextField.spellCheckingType = .no
@@ -69,6 +81,18 @@ final class ItemInfomationView: CustomView {
     
     itemNameTextField.delegate = self
     itemDescriptionTextView.delegate = self
+    
+    viewModel.selectedCategory
+      .sink { categoryTitle in
+        self.categoryLabel.text = categoryTitle
+        
+        if categoryTitle != "카테고리" {
+          self.categoryLabel.textColor = .black
+          self.setupCategoryUI(hidden: false, topAnchor: 100, viewHeight: 580)
+          // categoryTitle 가 카테고리가 아닌 경우는 이미 카테고리가 있는 경우 -> 팝업을 띄어야함 ->
+        }
+      }
+      .store(in: &viewModel.cancellabels)
   }
   
   override init(frame: CGRect) {
@@ -78,22 +102,19 @@ final class ItemInfomationView: CustomView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
+
   
-  // underline 추가
-  func addUnderLine(){
-    [
-      itemNameTextField,
-      categoryLabel
-    ].forEach {
-      setupUnderLinedView($0)
-    }
+  func setupCategoryUI(hidden: Bool, topAnchor: CGFloat, viewHeight: CGFloat){
+    itemStautsView.isHidden = hidden
+    itemSizeView.isHidden = hidden
+    describLabelTopAnchor.constant = topAnchor
+    delegate?.updateViewConstraint(height: viewHeight)
   }
   
   // 버튼에 함수 설정
   func addButtonActions(){
     addItemImageOrVideoButton.addTarget(self, action: #selector(onAddItemImageOrVideoButtonClicked), for: .touchUpInside)
-    categoryButton.addTarget(self, action: #selector(onCategoryButtonClicked), for: .touchUpInside)
-    
+ 
     [
       autoSelectCategoryView.itemCategory1Button,
       autoSelectCategoryView.itemCategory2Button,
@@ -102,7 +123,6 @@ final class ItemInfomationView: CustomView {
     ].forEach {
       $0?.addTarget(self, action: #selector(onAutoSelectedCategoryButtonClicked), for: .touchUpInside)
     }
-    
   }
   
   /// 상품 사진 추가
@@ -126,13 +146,13 @@ final class ItemInfomationView: CustomView {
     guard let view = autoSelectCategoryView else { return }
     switch sender {
     case view.itemCategory1Button:
-      categoryLabel.text = view.itemCategory1Label.text
+      viewModel.getButtonTitle(title: view.itemCategory1Label.text ?? "카테고리")
     case view.itemCategory2Button:
-      categoryLabel.text = view.itemCategory2Label.text
+      viewModel.getButtonTitle(title: view.itemCategory2Label.text ?? "카테고리")
     case view.itemCategory3Button:
-      categoryLabel.text = view.itemCategory3Label.text
+      viewModel.getButtonTitle(title: view.itemCategory3Label.text ?? "카테고리")
     case view.itemCategory4Button:
-      categoryLabel.text = view.itemCategory4Label.text
+      viewModel.getButtonTitle(title: view.itemCategory4Label.text ?? "카테고리")
     default:
       return
     }
@@ -142,15 +162,21 @@ final class ItemInfomationView: CustomView {
     selectCategoryTopAnchor.constant = 20
     autoSelectCategoryView.isHidden = true
     
-    delegate?.updateViewConstraint(height: 500)
+    delegate?.updateViewConstraint(height: 600)
   }
   
   /// 카테고리 설정
   /// - Parameter sender: 카테고리 버튼
-  @objc func onCategoryButtonClicked(sender: UIButton) {
-    
+  @IBAction func onCategoryButtonClicked(_ sender: Any) {
+    print(#fileID, #function, #line," - 버튼댑")
 
-    
+    delegate?.navToSelectCategoryVC(sender: sender as! UIButton)
+    /**
+     카테고리가 있는 경우 - 카테고리를 변경할까요? 라는 팝업뜸
+     없는경우 - 그냥 변경
+     
+     카테고리 변경 후 bottomsheet올라옴
+     */
   }
 }
 
@@ -177,15 +203,14 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
   func textFieldDidBeginEditing(_ textField: UITextField) {
     print(#fileID, #function, #line," - texfield")
 
-    if let underLine = textField.layer.sublayers?.first as? CALayer {
-      underLine.backgroundColor = UIColor.black.cgColor
-    }
+      itemNameLabelUnderLineView.backgroundColor = UIColor.black
+    
   }
   
   /// textField입력 시 category 보이게 설정
   /// - Parameter textField: 상품명 textFiedl
   func textFieldDidChangeSelection(_ textField: UITextField) {
-    // textFiedl가 비어있는경우
+    // textField가 비어있는경우
     guard let contentIsEmpty = textField.text?.isEmpty, !contentIsEmpty else {
       selectCategoryTopAnchor.constant = 20
       autoSelectCategoryView.isHidden = true
@@ -197,7 +222,9 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
     if let text = itemNameTextField.text, !text.isEmpty, text != "상품명" {
       selectCategoryTopAnchor.constant = 65
       autoSelectCategoryView.isHidden = false
-      delegate?.updateViewConstraint(height: 550)
+      
+      let height: CGFloat = categoryLabel.text != "카테고리" ? 600 : 530
+      delegate?.updateViewConstraint(height: height)
     }
   }
 
@@ -206,8 +233,7 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
   ///   - textField: 상품명 textFeld
   ///   - reason:  입력 종료 이유
   func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-    if let underLine = textField.layer.sublayers?.first as? CALayer {
-      underLine.backgroundColor = UIColor.lightGray.cgColor
-    }
+      itemNameLabelUnderLineView.backgroundColor = UIColor.lightGray
+    
   }
 }

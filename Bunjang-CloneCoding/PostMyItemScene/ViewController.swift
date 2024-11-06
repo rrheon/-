@@ -34,6 +34,14 @@ extension ViewController: UIScrollViewDelegate {
 }
 
 extension ViewController: ItemInfomationViewDelegate {
+  func navToExceptionItemListVC(sender: UIButton) {
+    self.performSegue(withIdentifier: "ExceptionItemListVC", sender: sender)
+  }
+  
+  func navToSelectCategoryVC(sender: UIButton){
+    self.performSegue(withIdentifier: "navToSeletCategoryVC", sender: sender)
+  }
+  
   func updateViewConstraint(height: CGFloat) {
     itemInfomationViewHeightAnchor.constant = height
   }

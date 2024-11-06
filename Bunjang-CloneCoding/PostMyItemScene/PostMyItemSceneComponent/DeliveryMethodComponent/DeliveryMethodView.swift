@@ -13,8 +13,6 @@ final class DeliveryMethodView: CustomView {
   override func awakeFromNib() {
     super.awakeFromNib()
     applyNib()
-    setupUnderLinedView(nomalDeliveryStackView)
-    setupUnderLinedView(halfPriceDeliveryStackView)
   }
   
   override init(frame: CGRect) {

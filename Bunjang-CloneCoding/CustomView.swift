@@ -37,16 +37,5 @@ class CustomView: UIView {
       view.trailingAnchor.constraint(equalTo: self.trailingAnchor)
     ])
   }
-  
-  
-  /// view에 underline 설정
-  /// - Parameter view: underline을 추가할 view
-  func setupUnderLinedView(_ view: UIView) {
-    let bottomLayer = CALayer()
-    bottomLayer.frame = CGRect(x: 0, y: view.bounds.height + 10, width: view.bounds.width, height: 1)
-    print(#fileID, #function, #line," - \(view.bounds.width)")
-    
-    bottomLayer.backgroundColor = UIColor.lightGray.cgColor
-    view.layer.addSublayer(bottomLayer)
-  }
+
 }

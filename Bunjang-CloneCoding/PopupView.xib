@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupView" customModule="Bunjang_CloneCoding" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCQ-Fc-5TO">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리를 변경할까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-dI-WWv">
+                            <rect key="frame" x="10" y="0.0" width="373" height="28.666666666666668"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsY-Id-QSa">
+                            <rect key="frame" x="10" y="48.666666666666671" width="373" height="40.666666666666671"/>
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">지금 변경하면 입력한 상품 정보 일부가 
+초기화 돼요.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldo-Qb-Ur3">
+                            <rect key="frame" x="0.0" y="119.33333333333334" width="393" height="1"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="eFf-Wi-Ev6"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEU-E4-Pz3">
+                            <rect key="frame" x="0.0" y="130.33333333333334" width="393" height="38"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="카테고리 변경">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="baseForegroundColor" red="0.14521131504162785" green="0.56240135732323226" blue="0.25323196155915778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4h-AQ-dBG">
+                            <rect key="frame" x="0.0" y="178.33333333333334" width="393" height="1"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Zaa-V3-zoK"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKj-JG-OpB">
+                            <rect key="frame" x="0.0" y="197" width="393" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="취소">
+                                <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="tEU-E4-Pz3" firstAttribute="top" secondItem="Ldo-Qb-Ur3" secondAttribute="bottom" constant="10" id="022-rj-rDc"/>
+                        <constraint firstItem="EsY-Id-QSa" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" constant="10" id="8s3-h5-KOj"/>
+                        <constraint firstItem="Ldo-Qb-Ur3" firstAttribute="top" secondItem="EsY-Id-QSa" secondAttribute="bottom" constant="30" id="BZT-Tr-Xlh"/>
+                        <constraint firstAttribute="trailing" secondItem="KKj-JG-OpB" secondAttribute="trailing" id="DFk-Tv-f9x"/>
+                        <constraint firstItem="l4h-AQ-dBG" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" id="GbO-EJ-Zp6"/>
+                        <constraint firstItem="KKj-JG-OpB" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" id="I7t-ww-MH7"/>
+                        <constraint firstAttribute="trailing" secondItem="EsY-Id-QSa" secondAttribute="trailing" constant="10" id="Kry-Pb-EWh"/>
+                        <constraint firstItem="EsY-Id-QSa" firstAttribute="top" secondItem="u9l-dI-WWv" secondAttribute="bottom" constant="20" id="RFd-EV-ivk"/>
+                        <constraint firstAttribute="trailing" secondItem="l4h-AQ-dBG" secondAttribute="trailing" id="aKI-Gt-RS4"/>
+                        <constraint firstAttribute="trailing" secondItem="u9l-dI-WWv" secondAttribute="trailing" constant="10" id="cFC-ob-jXS"/>
+                        <constraint firstItem="u9l-dI-WWv" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" constant="10" id="cxT-q3-PTD"/>
+                        <constraint firstItem="Ldo-Qb-Ur3" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" id="huK-WM-vjK"/>
+                        <constraint firstItem="tEU-E4-Pz3" firstAttribute="leading" secondItem="QCQ-Fc-5TO" secondAttribute="leading" id="ipS-Fb-zvh"/>
+                        <constraint firstItem="u9l-dI-WWv" firstAttribute="top" secondItem="QCQ-Fc-5TO" secondAttribute="top" id="owX-rc-cGm"/>
+                        <constraint firstItem="tEU-E4-Pz3" firstAttribute="bottom" secondItem="l4h-AQ-dBG" secondAttribute="top" constant="-10" id="pOd-1v-po2"/>
+                        <constraint firstAttribute="trailing" secondItem="Ldo-Qb-Ur3" secondAttribute="trailing" id="rxP-GV-Nrk"/>
+                        <constraint firstItem="KKj-JG-OpB" firstAttribute="top" secondItem="l4h-AQ-dBG" secondAttribute="bottom" constant="17.666666666666657" id="ubp-Ur-xOn"/>
+                        <constraint firstAttribute="trailing" secondItem="tEU-E4-Pz3" secondAttribute="trailing" id="ucv-Iu-mSV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="secondarySystemBackgroundColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QCQ-Fc-5TO" secondAttribute="bottom" id="4ca-ic-UMT"/>
+                <constraint firstItem="QCQ-Fc-5TO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c5Z-bb-2Kh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QCQ-Fc-5TO" secondAttribute="trailing" id="jjS-BV-BWN"/>
+                <constraint firstItem="QCQ-Fc-5TO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vWK-PS-CqP"/>
+            </constraints>
+            <point key="canvasLocation" x="-30" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
