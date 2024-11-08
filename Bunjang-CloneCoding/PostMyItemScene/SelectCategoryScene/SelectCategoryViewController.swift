@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Combine
 
+import Combine
 
 final class SelectCategoryViewController: UIViewController {
   let viewModel = ViewModel.shared
@@ -33,8 +33,9 @@ final class SelectCategoryViewController: UIViewController {
   @objc func onCategoryButtonClicked(sender: UIButton){
     // viewmodel에서 함수를 이용해서 버튼의 타이틀을 가져옴 -> 가져온게 변화가 확인되면 카테고리 버튼에 입력
     guard let title = sender.titleLabel?.text else { return }
-    viewModel.getButtonTitle(title: title)
     self.navigationController?.popViewController(animated: true)
+
+    viewModel.getButtonTitle(title: title)
   }
   
   /// 추천 카테고리의 title 설정

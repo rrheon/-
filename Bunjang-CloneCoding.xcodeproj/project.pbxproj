@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D798A4A53383574C210B1F24 /* Pods_Bunjang_CloneCoding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04DF5788F8E01D97D993C3 /* Pods_Bunjang_CloneCoding.framework */; };
 		EE1ADF0E2CD90C300011C288 /* ItemCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADF0D2CD90C300011C288 /* ItemCategoryView.swift */; };
 		EE1ADF102CD90C3C0011C288 /* ItemCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1ADF0F2CD90C3C0011C288 /* ItemCategoryView.xib */; };
 		EE1ADF122CD9B6300011C288 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADF112CD9B6300011C288 /* UIButton+Ext.swift */; };
@@ -15,13 +16,18 @@
 		EE3F90DB2CDA6D8000DDF011 /* ExceptionItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F90DA2CDA6D8000DDF011 /* ExceptionItemListViewController.swift */; };
 		EE3F90DE2CDB463100DDF011 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F90DD2CDB463100DDF011 /* SelectCategoryViewController.swift */; };
 		EE3F90E02CDB46C200DDF011 /* SelectCategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3F90DF2CDB46C200DDF011 /* SelectCategoryViewController.storyboard */; };
+		EE4774B22CDC9920003086ED /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4774B12CDC9920003086ED /* BottomSheetViewController.swift */; };
+		EE4774B42CDC99A5003086ED /* ItemStatusViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4774B32CDC99A5003086ED /* ItemStatusViewComponent.xib */; };
+		EE4774B72CDC99BB003086ED /* ItemStatusViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4774B62CDC99BB003086ED /* ItemStatusViewComponent.swift */; };
+		EE51DF852CDD1EC0009E7746 /* ItemSizeViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE51DF842CDD1EC0009E7746 /* ItemSizeViewComponent.xib */; };
+		EE51DF872CDD1ECB009E7746 /* ItemSizeViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE51DF862CDD1ECB009E7746 /* ItemSizeViewComponent.swift */; };
 		EE539C162CD8AE4D00F70CC0 /* DeliveryMethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE539C152CD8AE4D00F70CC0 /* DeliveryMethodView.xib */; };
 		EE539C182CD8AE5300F70CC0 /* DeliveryMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE539C172CD8AE5300F70CC0 /* DeliveryMethodView.swift */; };
 		EE539C1B2CD8B2D300F70CC0 /* AdditionalInfomationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE539C1A2CD8B2D300F70CC0 /* AdditionalInfomationView.xib */; };
 		EE539C1D2CD8B2E700F70CC0 /* AdditionalInfomationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE539C1C2CD8B2E700F70CC0 /* AdditionalInfomationView.swift */; };
 		EEA99FA72CDB66F7008411C2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FA62CDB66F7008411C2 /* ViewModel.swift */; };
-		EEA99FAA2CDBB602008411C2 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA99FA92CDBB602008411C2 /* PopupView.xib */; };
-		EEA99FAC2CDBB618008411C2 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FAB2CDBB618008411C2 /* PopupView.swift */; };
+		EEA99FAC2CDBB618008411C2 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FAB2CDBB618008411C2 /* PopupViewController.swift */; };
+		EEA99FAE2CDBBB41008411C2 /* PopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA99FAD2CDBBB41008411C2 /* PopupViewController.storyboard */; };
 		EEB535702CD632EC00FDA96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB5356F2CD632EC00FDA96A /* AppDelegate.swift */; };
 		EEB535722CD632EC00FDA96A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB535712CD632EC00FDA96A /* SceneDelegate.swift */; };
 		EEB535742CD632EC00FDA96A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB535732CD632EC00FDA96A /* ViewController.swift */; };
@@ -39,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3C48320D98313813873891 /* Pods-Bunjang-CloneCoding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunjang-CloneCoding.debug.xcconfig"; path = "Target Support Files/Pods-Bunjang-CloneCoding/Pods-Bunjang-CloneCoding.debug.xcconfig"; sourceTree = "<group>"; };
+		CE04DF5788F8E01D97D993C3 /* Pods_Bunjang_CloneCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bunjang_CloneCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D970B2FECF307AEE35662804 /* Pods-Bunjang-CloneCoding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bunjang-CloneCoding.release.xcconfig"; path = "Target Support Files/Pods-Bunjang-CloneCoding/Pods-Bunjang-CloneCoding.release.xcconfig"; sourceTree = "<group>"; };
 		EE1ADF0D2CD90C300011C288 /* ItemCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryView.swift; sourceTree = "<group>"; };
 		EE1ADF0F2CD90C3C0011C288 /* ItemCategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryView.xib; sourceTree = "<group>"; };
 		EE1ADF112CD9B6300011C288 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
@@ -47,13 +56,18 @@
 		EE3F90DA2CDA6D8000DDF011 /* ExceptionItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionItemListViewController.swift; sourceTree = "<group>"; };
 		EE3F90DD2CDB463100DDF011 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
 		EE3F90DF2CDB46C200DDF011 /* SelectCategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectCategoryViewController.storyboard; sourceTree = "<group>"; };
+		EE4774B12CDC9920003086ED /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		EE4774B32CDC99A5003086ED /* ItemStatusViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemStatusViewComponent.xib; sourceTree = "<group>"; };
+		EE4774B62CDC99BB003086ED /* ItemStatusViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStatusViewComponent.swift; sourceTree = "<group>"; };
+		EE51DF842CDD1EC0009E7746 /* ItemSizeViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemSizeViewComponent.xib; sourceTree = "<group>"; };
+		EE51DF862CDD1ECB009E7746 /* ItemSizeViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSizeViewComponent.swift; sourceTree = "<group>"; };
 		EE539C152CD8AE4D00F70CC0 /* DeliveryMethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryMethodView.xib; sourceTree = "<group>"; };
 		EE539C172CD8AE5300F70CC0 /* DeliveryMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryMethodView.swift; sourceTree = "<group>"; };
 		EE539C1A2CD8B2D300F70CC0 /* AdditionalInfomationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionalInfomationView.xib; sourceTree = "<group>"; };
 		EE539C1C2CD8B2E700F70CC0 /* AdditionalInfomationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfomationView.swift; sourceTree = "<group>"; };
 		EEA99FA62CDB66F7008411C2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		EEA99FA92CDBB602008411C2 /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
-		EEA99FAB2CDBB618008411C2 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		EEA99FAB2CDBB618008411C2 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		EEA99FAD2CDBBB41008411C2 /* PopupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopupViewController.storyboard; sourceTree = "<group>"; };
 		EEB5356C2CD632EC00FDA96A /* Bunjang-CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bunjang-CloneCoding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB5356F2CD632EC00FDA96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEB535712CD632EC00FDA96A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,12 +91,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D798A4A53383574C210B1F24 /* Pods_Bunjang_CloneCoding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DAAE561CC67606A59AA4D7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3C48320D98313813873891 /* Pods-Bunjang-CloneCoding.debug.xcconfig */,
+				D970B2FECF307AEE35662804 /* Pods-Bunjang-CloneCoding.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		55C111C1B97952CED206A291 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE04DF5788F8E01D97D993C3 /* Pods_Bunjang_CloneCoding.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE1ADF132CD9BFCD0011C288 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +156,35 @@
 			path = PostMyItemSceneComponent;
 			sourceTree = "<group>";
 		};
+		EE4774AD2CDC974A003086ED /* PopupVC */ = {
+			isa = PBXGroup;
+			children = (
+				EEA99FAB2CDBB618008411C2 /* PopupViewController.swift */,
+				EEA99FAD2CDBBB41008411C2 /* PopupViewController.storyboard */,
+			);
+			path = PopupVC;
+			sourceTree = "<group>";
+		};
+		EE4774AE2CDC98F0003086ED /* BottomSheetVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE4774B12CDC9920003086ED /* BottomSheetViewController.swift */,
+				EE4774B52CDC99A9003086ED /* Component */,
+			);
+			path = BottomSheetVC;
+			sourceTree = "<group>";
+		};
+		EE4774B52CDC99A9003086ED /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EE4774B32CDC99A5003086ED /* ItemStatusViewComponent.xib */,
+				EE4774B62CDC99BB003086ED /* ItemStatusViewComponent.swift */,
+				EE51DF842CDD1EC0009E7746 /* ItemSizeViewComponent.xib */,
+				EE51DF862CDD1ECB009E7746 /* ItemSizeViewComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		EE539C142CD8ACB100F70CC0 /* DeliveryMethodComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +217,8 @@
 			children = (
 				EEB5356E2CD632EC00FDA96A /* Bunjang-CloneCoding */,
 				EEB5356D2CD632EC00FDA96A /* Products */,
+				0DAAE561CC67606A59AA4D7E /* Pods */,
+				55C111C1B97952CED206A291 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,8 +239,8 @@
 				EE1ADF172CD9F77D0011C288 /* KeyboardToolbar.swift */,
 				EEA99FA62CDB66F7008411C2 /* ViewModel.swift */,
 				EE1ADF142CD9BFDE0011C288 /* PostMyItemScene */,
-				EEA99FA92CDBB602008411C2 /* PopupView.xib */,
-				EEA99FAB2CDBB618008411C2 /* PopupView.swift */,
+				EE4774AD2CDC974A003086ED /* PopupVC */,
+				EE4774AE2CDC98F0003086ED /* BottomSheetVC */,
 				EE1ADF132CD9BFCD0011C288 /* Extension */,
 				EEB535782CD632EE00FDA96A /* Assets.xcassets */,
 				EEB5357A2CD632EE00FDA96A /* LaunchScreen.storyboard */,
@@ -215,15 +278,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEB535802CD632EE00FDA96A /* Build configuration list for PBXNativeTarget "Bunjang-CloneCoding" */;
 			buildPhases = (
+				BB0F0643E6B17CD3FE7395C0 /* [CP] Check Pods Manifest.lock */,
 				EEB535682CD632EC00FDA96A /* Sources */,
 				EEB535692CD632EC00FDA96A /* Frameworks */,
 				EEB5356A2CD632EC00FDA96A /* Resources */,
+				3A50D557C030E8A8281797BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Bunjang-CloneCoding";
+			packageProductDependencies = (
+			);
 			productName = "Bunjang-CloneCoding";
 			productReference = EEB5356C2CD632EC00FDA96A /* Bunjang-CloneCoding.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +319,8 @@
 				Base,
 			);
 			mainGroup = EEB535632CD632EC00FDA96A;
+			packageReferences = (
+			);
 			productRefGroup = EEB5356D2CD632EC00FDA96A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,10 +341,12 @@
 				EEB535972CD8A12100FDA96A /* ItemPriceView.xib in Resources */,
 				EEB535772CD632EC00FDA96A /* Base in Resources */,
 				EE3F90D92CDA6D6F00DDF011 /* ExceptionItemListViewController.storyboard in Resources */,
+				EEA99FAE2CDBBB41008411C2 /* PopupViewController.storyboard in Resources */,
 				EE539C162CD8AE4D00F70CC0 /* DeliveryMethodView.xib in Resources */,
+				EE4774B42CDC99A5003086ED /* ItemStatusViewComponent.xib in Resources */,
 				EE539C1B2CD8B2D300F70CC0 /* AdditionalInfomationView.xib in Resources */,
+				EE51DF852CDD1EC0009E7746 /* ItemSizeViewComponent.xib in Resources */,
 				EE1ADF102CD90C3C0011C288 /* ItemCategoryView.xib in Resources */,
-				EEA99FAA2CDBB602008411C2 /* PopupView.xib in Resources */,
 				EEB5358F2CD66CE000FDA96A /* ItemInfomationView.xib in Resources */,
 				EEB535842CD640AA00FDA96A /* ItemImageView.xib in Resources */,
 			);
@@ -283,22 +354,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A50D557C030E8A8281797BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bunjang-CloneCoding/Pods-Bunjang-CloneCoding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bunjang-CloneCoding/Pods-Bunjang-CloneCoding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bunjang-CloneCoding/Pods-Bunjang-CloneCoding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0F0643E6B17CD3FE7395C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bunjang-CloneCoding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEB535682CD632EC00FDA96A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE1ADF0E2CD90C300011C288 /* ItemCategoryView.swift in Sources */,
+				EE4774B22CDC9920003086ED /* BottomSheetViewController.swift in Sources */,
 				EEB535742CD632EC00FDA96A /* ViewController.swift in Sources */,
+				EE4774B72CDC99BB003086ED /* ItemStatusViewComponent.swift in Sources */,
 				EE3F90DE2CDB463100DDF011 /* SelectCategoryViewController.swift in Sources */,
 				EE539C1D2CD8B2E700F70CC0 /* AdditionalInfomationView.swift in Sources */,
+				EE51DF872CDD1ECB009E7746 /* ItemSizeViewComponent.swift in Sources */,
 				EEB535912CD66CED00FDA96A /* ItemInfomationView.swift in Sources */,
 				EEB535702CD632EC00FDA96A /* AppDelegate.swift in Sources */,
 				EEA99FA72CDB66F7008411C2 /* ViewModel.swift in Sources */,
 				EE3F90DB2CDA6D8000DDF011 /* ExceptionItemListViewController.swift in Sources */,
 				EEB535992CD8A13400FDA96A /* ItemPriceView.swift in Sources */,
 				EEB5358C2CD6463500FDA96A /* CustomView.swift in Sources */,
-				EEA99FAC2CDBB618008411C2 /* PopupView.swift in Sources */,
+				EEA99FAC2CDBB618008411C2 /* PopupViewController.swift in Sources */,
 				EEB535942CD6FE4200FDA96A /* UIView+Ext.swift in Sources */,
 				EEB535722CD632EC00FDA96A /* SceneDelegate.swift in Sources */,
 				EE539C182CD8AE5300F70CC0 /* DeliveryMethodView.swift in Sources */,
@@ -367,7 +483,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -430,7 +546,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -451,6 +567,7 @@
 		};
 		EEB535812CD632EE00FDA96A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3C48320D98313813873891 /* Pods-Bunjang-CloneCoding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +580,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +596,7 @@
 		};
 		EEB535822CD632EE00FDA96A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D970B2FECF307AEE35662804 /* Pods-Bunjang-CloneCoding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +609,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

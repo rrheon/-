@@ -22,8 +22,8 @@ final class ItemImageView: CustomView {
   }
   
   
-  /// 이미지 주입
-  /// - Parameter imageName: 주입할 이미지
+  /// 이미지 넣기
+  /// - Parameter imageName: 생성할 이미지이름
   convenience init(imageName: String = "star"){
     self.init(frame: .zero)
     

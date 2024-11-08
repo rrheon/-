@@ -1,0 +1,20 @@
+PODS:
+  - PanModal (1.2.7)
+  - "UITextView+Placeholder (1.4.0)"
+
+DEPENDENCIES:
+  - PanModal
+  - "UITextView+Placeholder"
+
+SPEC REPOS:
+  trunk:
+    - PanModal
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
+
+PODFILE CHECKSUM: 96072d2c36388af630c79c6c968eef0476f79143
+
+COCOAPODS: 1.15.2

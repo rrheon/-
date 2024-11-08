@@ -7,6 +7,8 @@
 
 import UIKit
 
+import UITextView_Placeholder
+
 protocol ItemInfomationViewDelegate {
   func updateViewConstraint(height: CGFloat)
   func navToExceptionItemListVC(sender: UIButton)
@@ -17,6 +19,7 @@ final class ItemInfomationView: CustomView {
   var delegate: ItemInfomationViewDelegate?
   
   let viewModel = ViewModel.shared
+  let textViewPlaceHolder = "브랜드, 모델명, 구매 시기, 하자 유무 등 상품 설명을 최대한 자세히 적어주세요.\n전화번호, SNS 계정 등 개인정보 입력은 제한될 수 있어요"
   
   @IBOutlet weak var itemImageOrVideoStackView: UIStackView!
   @IBOutlet weak var addItemImageOrVideoButton: UIButton!
@@ -54,6 +57,8 @@ final class ItemInfomationView: CustomView {
   }()
   
   @IBOutlet weak var itemStautsView: UIView!
+  @IBOutlet weak var itemStatusButton: UIButton!
+  
   @IBOutlet weak var itemSizeView: UIView!
   
   // 상품상태, 사이즈가 있을 때 100 없을 때 20?
@@ -81,18 +86,10 @@ final class ItemInfomationView: CustomView {
     
     itemNameTextField.delegate = self
     itemDescriptionTextView.delegate = self
-    
-    viewModel.selectedCategory
-      .sink { categoryTitle in
-        self.categoryLabel.text = categoryTitle
-        
-        if categoryTitle != "카테고리" {
-          self.categoryLabel.textColor = .black
-          self.setupCategoryUI(hidden: false, topAnchor: 100, viewHeight: 580)
-          // categoryTitle 가 카테고리가 아닌 경우는 이미 카테고리가 있는 경우 -> 팝업을 띄어야함 ->
-        }
-      }
-      .store(in: &viewModel.cancellabels)
+    itemDescriptionTextView.placeholder = textViewPlaceHolder
+    itemDescriptionTextView.sizeToFit()
+
+    setupActions()
   }
   
   override init(frame: CGRect) {
@@ -104,6 +101,54 @@ final class ItemInfomationView: CustomView {
   }
 
   
+  /// viewmodel에서의 action
+  func setupActions(){
+    viewModel.selectedCategory
+      .sink { title in
+        guard let categoryTitle = title else { return }
+        if self.categoryLabel.text != "카테고리" && self.categoryLabel.text != categoryTitle {
+          // categoryTitle 가 카테고리가 아닌 경우는 이미 카테고리가 있는 경우 -> 팝업을 띄어야함 ->
+          self.viewModel.showPopupVC.send(true)
+        } else {
+          // 그냥 기본 카테고리일 경우 색상이 블랙으로 설정됨, 팝업뷰 뒤 배경이 흰색임 -> 투명으로 변경
+          self.categoryLabel.text = categoryTitle
+          self.viewModel.changeCategoryButtonTapped.send(true)
+        }
+        
+        self.setupCategoryUI(hidden: false, topAnchor: 100, viewHeight: 580)
+        
+        let textColor: UIColor = self.categoryLabel.text == "카테고리" ? UIColor.lightGray : UIColor.black
+        self.categoryLabel.textColor = textColor
+      }
+      .store(in: &viewModel.cancellabels)
+    
+    viewModel.changeCategoryButtonTapped
+      .sink { tapped in
+        guard let isTapped = tapped else { return }
+        if isTapped {
+          self.categoryLabel.text = self.viewModel.selectedCategory.value
+        }
+      }
+      .store(in: &viewModel.cancellabels)
+    
+    viewModel.changeStatusButtonTapped
+      .sink { changeStatus in
+        guard let isChangedStatus = changeStatus else { return }
+        if isChangedStatus {
+          let itemStatus = self.viewModel.itemStatus.value
+          self.itemStatusButton.setTitle(itemStatus, for: .normal)
+          self.itemStatusButton.setTitleColor(.black, for: .normal)
+        }
+      }
+      .store(in: &viewModel.cancellabels)
+  }
+  
+  
+  /// 카테고리가 선택되었을 때 UI 설정
+  /// - Parameters:
+  ///   - hidden: 상품상태 및 사이즈 UI hidden 여부
+  ///   - topAnchor: 설명 textView의 topAnchor
+  ///   - viewHeight: itemInfomationView의 높이
   func setupCategoryUI(hidden: Bool, topAnchor: CGFloat, viewHeight: CGFloat){
     itemStautsView.isHidden = hidden
     itemSizeView.isHidden = hidden
@@ -114,7 +159,11 @@ final class ItemInfomationView: CustomView {
   // 버튼에 함수 설정
   func addButtonActions(){
     addItemImageOrVideoButton.addTarget(self, action: #selector(onAddItemImageOrVideoButtonClicked), for: .touchUpInside)
- 
+    
+    itemStatusButton.addAction(UIAction { _ in
+      self.viewModel.changeCategoryButtonTapped.send(true)
+    }, for: .touchUpInside)
+    
     [
       autoSelectCategoryView.itemCategory1Button,
       autoSelectCategoryView.itemCategory2Button,
@@ -161,7 +210,7 @@ final class ItemInfomationView: CustomView {
 
     selectCategoryTopAnchor.constant = 20
     autoSelectCategoryView.isHidden = true
-    
+  
     delegate?.updateViewConstraint(height: 600)
   }
   
@@ -171,12 +220,6 @@ final class ItemInfomationView: CustomView {
     print(#fileID, #function, #line," - 버튼댑")
 
     delegate?.navToSelectCategoryVC(sender: sender as! UIButton)
-    /**
-     카테고리가 있는 경우 - 카테고리를 변경할까요? 라는 팝업뜸
-     없는경우 - 그냥 변경
-     
-     카테고리 변경 후 bottomsheet올라옴
-     */
   }
 }
 
@@ -189,7 +232,8 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
   ///   - text: 사용자가 입력한 text
   /// - Returns: 제한할 글자수 범위
   func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-    let currentText = textView.text ?? ""
+    var currentText = textView.text ?? ""
+    if currentText == textViewPlaceHolder { currentText = "" }
     guard let stringRange = Range(range, in: currentText) else { return false }
     
     let changedText = currentText.replacingCharacters(in: stringRange, with: text)
@@ -234,6 +278,30 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
   ///   - reason:  입력 종료 이유
   func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
       itemNameLabelUnderLineView.backgroundColor = UIColor.lightGray
+  }
+  
+  func textViewDidBeginEditing(_ textView: UITextView) {
+    textView.textColor = .black
+  }
+  
+  // MARK: textview 높이 자동조절
+  func textViewDidChange(_ textView: UITextView) {
+    let size = CGSize(width: self.frame.width, height: .infinity)
+    let estimatedSize = textView.sizeThatFits(size)
     
+    textView.constraints.forEach { (constraint) in
+      
+      /// 180 이하일때는 더 이상 줄어들지 않게하기
+      if estimatedSize.height <= 180 {
+        
+      }
+      else {
+        if constraint.firstAttribute == .height {
+          constraint.constant = estimatedSize.height
+          // 상품상태,사이즈 / textfield입력 시 카테고리 나올 때 업데이트 되는 높이가 달라야함
+          delegate?.updateViewConstraint(height: 450 + constraint.constant)
+        }
+      }
+    }
   }
 }
