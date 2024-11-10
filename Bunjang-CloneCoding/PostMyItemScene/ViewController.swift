@@ -24,7 +24,7 @@ class ViewController: UIViewController  {
     // Do any additional setup after loading the view.
     
     setupDelegate()
-    
+  
     viewModel.showPopupVC
       .sink { showPopup in
         guard let isShowPopup = showPopup else { return }

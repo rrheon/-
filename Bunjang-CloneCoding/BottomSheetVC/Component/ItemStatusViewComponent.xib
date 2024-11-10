@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-hn-Jg1">
-                    <rect key="frame" x="0.0" y="59" width="393" height="648"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="658"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gBe-bW-n1g">
-                            <rect key="frame" x="0.0" y="50" width="393" height="514"/>
+                            <rect key="frame" x="0.0" y="30" width="393" height="514"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 상태는 어떤가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-kQ-OAg">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="24"/>
@@ -182,14 +182,14 @@
                         <constraint firstItem="gBe-bW-n1g" firstAttribute="leading" secondItem="W4N-yc-Daf" secondAttribute="leading" id="A9T-2W-NLo"/>
                         <constraint firstItem="gBe-bW-n1g" firstAttribute="width" secondItem="8Kg-qt-LsY" secondAttribute="width" id="Klz-ou-def"/>
                         <constraint firstItem="gBe-bW-n1g" firstAttribute="trailing" secondItem="W4N-yc-Daf" secondAttribute="trailing" id="Olh-74-G8b"/>
-                        <constraint firstItem="gBe-bW-n1g" firstAttribute="top" secondItem="W4N-yc-Daf" secondAttribute="top" constant="50" id="WkE-Kw-eM3"/>
+                        <constraint firstItem="gBe-bW-n1g" firstAttribute="top" secondItem="W4N-yc-Daf" secondAttribute="top" constant="30" id="WkE-Kw-eM3"/>
                         <constraint firstItem="gBe-bW-n1g" firstAttribute="bottom" secondItem="W4N-yc-Daf" secondAttribute="bottom" id="hBf-3B-05X"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="W4N-yc-Daf"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="8Kg-qt-LsY"/>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-3y-fPW">
-                    <rect key="frame" x="0.0" y="717" width="393" height="1"/>
+                    <rect key="frame" x="0.0" y="727" width="393" height="1"/>
                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="o9a-Ii-xip"/>
@@ -211,7 +211,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="YJI-hn-Jg1" secondAttribute="leading" id="0mm-lK-GtQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YJI-hn-Jg1" secondAttribute="trailing" id="IyJ-bE-o9H"/>
-                <constraint firstItem="rM5-vY-P00" firstAttribute="top" secondItem="kg9-3y-fPW" secondAttribute="bottom" constant="30" id="L1U-7R-5jL"/>
+                <constraint firstItem="rM5-vY-P00" firstAttribute="top" secondItem="kg9-3y-fPW" secondAttribute="bottom" constant="20" id="L1U-7R-5jL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rM5-vY-P00" secondAttribute="trailing" constant="10" id="Ndi-GK-zsA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="YJI-hn-Jg1" secondAttribute="top" id="Q9e-LN-Cpp"/>
                 <constraint firstItem="kg9-3y-fPW" firstAttribute="top" secondItem="YJI-hn-Jg1" secondAttribute="bottom" constant="10" id="QIJ-Ub-fQn"/>
@@ -226,16 +226,16 @@
     </objects>
     <resources>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

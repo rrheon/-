@@ -239,6 +239,8 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
     let changedText = currentText.replacingCharacters(in: stringRange, with: text)
     
     textViewCountLabel.text = "\(changedText.count)/2000"
+    
+    // TODO: 붙여넣기 하면 2000자 넘음 
     return changedText.count <= 2000
   }
   
@@ -298,7 +300,8 @@ extension ItemInfomationView: UITextViewDelegate, UITextFieldDelegate {
       else {
         if constraint.firstAttribute == .height {
           constraint.constant = estimatedSize.height
-          // 상품상태,사이즈 / textfield입력 시 카테고리 나올 때 업데이트 되는 높이가 달라야함
+          
+          // TODO:  상품상태,사이즈 / textfield입력 시 카테고리 나올 때 업데이트 되는 높이가 달라야함
           delegate?.updateViewConstraint(height: 450 + constraint.constant)
         }
       }

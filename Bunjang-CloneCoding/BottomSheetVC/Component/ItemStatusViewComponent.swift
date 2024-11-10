@@ -23,8 +23,9 @@ final class ItemStatusViewComponent: CustomView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    applyNib()
     
+    applyNib()
+  
     [
       statusNewButton,
       statusNoUseButton,
