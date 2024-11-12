@@ -8,6 +8,9 @@
 import UIKit
 
 extension UIView {
+  
+  /// customView 제약 적용
+  /// - Parameter nibName: 사용할 nibName( nil이면 파일명사용 )
   func applyNib(nibName: String? = nil){
     let _nibName = nibName == nil ? String(describing: Self.self) : nibName
    

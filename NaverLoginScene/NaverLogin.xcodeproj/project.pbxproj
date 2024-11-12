@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE9EE88E2CE2F2EE00C46B82 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */; };
+		EE9EE8902CE2F61800C46B82 /* NaverLogoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */; };
+		EE9EE8922CE2F8B900C46B82 /* NaverLogoButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */; };
+		EE9EE8942CE342DD00C46B82 /* NaverLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */; };
+		EE9EE8962CE3435200C46B82 /* NaverLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */; };
+		EE9EE8982CE3498B00C46B82 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */; };
 		EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */; };
 		EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */; };
 		EEFAF6D82CE21FB5003C1F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D72CE21FB5003C1F83 /* ViewController.swift */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogoButton.swift; sourceTree = "<group>"; };
+		EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NaverLogoButton.xib; sourceTree = "<group>"; };
+		EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NaverLoginButton.xib; sourceTree = "<group>"; };
+		EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginButton.swift; sourceTree = "<group>"; };
+		EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		EEFAF6D02CE21FB5003C1F83 /* NaverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +60,12 @@
 		EE9EE88C2CE250DF00C46B82 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */,
+				EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */,
 				EEFAF6E72CE24D01003C1F83 /* InputIDAndPasswordComponent.xib */,
 				EEFAF6E92CE24E59003C1F83 /* InputIDAndPasswordComponent.swift */,
+				EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */,
+				EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -91,6 +107,8 @@
 			children = (
 				EEFAF6ED2CE24FE1003C1F83 /* UITextField+Ext.swift */,
 				EEFAF6EB2CE24EA4003C1F83 /* UIView+Ext.swift */,
+				EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */,
+				EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -153,7 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9EE8942CE342DD00C46B82 /* NaverLoginButton.xib in Resources */,
 				EEFAF6DD2CE21FB6003C1F83 /* Assets.xcassets in Resources */,
+				EE9EE8922CE2F8B900C46B82 /* NaverLogoButton.xib in Resources */,
 				EEFAF6E02CE21FB6003C1F83 /* Base in Resources */,
 				EEFAF6E82CE24D01003C1F83 /* InputIDAndPasswordComponent.xib in Resources */,
 				EEFAF6DB2CE21FB5003C1F83 /* Base in Resources */,
@@ -168,11 +188,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFAF6D82CE21FB5003C1F83 /* ViewController.swift in Sources */,
+				EE9EE8902CE2F61800C46B82 /* NaverLogoButton.swift in Sources */,
 				EEFAF6EE2CE24FE1003C1F83 /* UITextField+Ext.swift in Sources */,
+				EE9EE8962CE3435200C46B82 /* NaverLoginButton.swift in Sources */,
 				EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */,
 				EEFAF6EC2CE24EA4003C1F83 /* UIView+Ext.swift in Sources */,
 				EEFAF6EA2CE24E59003C1F83 /* InputIDAndPasswordComponent.swift in Sources */,
+				EE9EE8982CE3498B00C46B82 /* UIColor+Ext.swift in Sources */,
 				EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */,
+				EE9EE88E2CE2F2EE00C46B82 /* UILabel+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

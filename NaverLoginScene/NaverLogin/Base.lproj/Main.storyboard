@@ -20,16 +20,38 @@
                                 <rect key="frame" x="10" y="213" width="373" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-gK-Yle" customClass="NaverLogoButton" customModule="NaverLogin" customModuleProvider="target">
+                                <rect key="frame" x="80" y="119" width="233" height="74"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7U-LC-miK" customClass="NaverLoginButton" customModule="NaverLogin" customModuleProvider="target">
+                                <rect key="frame" x="10" y="391" width="373" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6pW-Dr-BcH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2DP-e2-tTs" secondAttribute="bottom" constant="477" id="8gt-Qk-1IQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2DP-e2-tTs" secondAttribute="trailing" constant="10" id="Beq-AZ-den"/>
+                            <constraint firstItem="5h5-gK-Yle" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="CIy-da-cJE"/>
+                            <constraint firstItem="V7U-LC-miK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DK9-rO-eDQ"/>
                             <constraint firstItem="2DP-e2-tTs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="JXe-dL-sw8"/>
+                            <constraint firstItem="V7U-LC-miK" firstAttribute="top" secondItem="2DP-e2-tTs" secondAttribute="bottom" constant="50" id="VvI-vZ-aYC"/>
+                            <constraint firstItem="2DP-e2-tTs" firstAttribute="top" secondItem="5h5-gK-Yle" secondAttribute="bottom" constant="20" id="Yqu-14-ros"/>
                             <constraint firstItem="2DP-e2-tTs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ckB-wC-Tmi"/>
+                            <constraint firstItem="5h5-gK-Yle" firstAttribute="centerX" secondItem="2DP-e2-tTs" secondAttribute="centerX" id="gVB-vg-LT1"/>
+                            <constraint firstItem="5h5-gK-Yle" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="kfD-rm-yzh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V7U-LC-miK" secondAttribute="trailing" constant="10" id="ncz-2W-THC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idAndPasswordView" destination="2DP-e2-tTs" id="erN-y8-AeR"/>
+                        <outlet property="loginButtonView" destination="V7U-LC-miK" id="hrp-IK-DWq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

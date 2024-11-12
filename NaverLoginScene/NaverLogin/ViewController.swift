@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
   
-
+  @IBOutlet weak var idAndPasswordView: InputIDAndPasswordComponent!
+  
+  @IBOutlet weak var loginButtonView: NaverLoginButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
-
+    
+    idAndPasswordView.delegate = loginButtonView
+    
   }
 }
