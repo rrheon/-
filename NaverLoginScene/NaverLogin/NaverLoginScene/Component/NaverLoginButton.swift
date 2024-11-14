@@ -14,6 +14,7 @@ final class NaverLoginButton: UIView {
     super.awakeFromNib()
     
     activateLoginButton(activate: false)
+    naverLoginButton.layer.cornerRadius = 8
   }
   
   required init?(coder: NSCoder) {
@@ -23,7 +24,6 @@ final class NaverLoginButton: UIView {
   
   @IBAction func onLoginButtonClicked(_ sender: Any) {
     print(#fileID, #function, #line," - 로그인 버튼 탭")
-
   }
 }
 

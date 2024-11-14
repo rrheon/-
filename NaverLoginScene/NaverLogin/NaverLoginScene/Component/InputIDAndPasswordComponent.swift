@@ -13,8 +13,9 @@ protocol LoginButtonDelegate: AnyObject {
   func activateLoginButton(activate: Bool)
 }
 
+
 final class InputIDAndPasswordComponent: UIView{
-  weak var delegate: LoginButtonDelegate?
+  weak var loginButtonDelegate: LoginButtonDelegate?
   
   @IBOutlet weak var idTextField: UITextField!
   @IBOutlet weak var idTextFieldPlaceHolderLabel: UILabel!
@@ -29,11 +30,12 @@ final class InputIDAndPasswordComponent: UIView{
   @IBOutlet weak var clearIDButton: UIButton!
   @IBOutlet weak var clearPasswordButton: UIButton!
   
-  
   @IBOutlet weak var passwordHiddenButton: UIButton!
   
-  // TODO: textfield 문자열 특수문자 입력가능, 이모티콘 1개입력되면 입력 중단시키기
+  var keyboardToolbar: KeyboardToolbar?
   
+  // TODO: textfield 문자열 특수문자 입력가능, 이모티콘 1개입력되면 입력 중단시키기
+    
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -49,18 +51,19 @@ final class InputIDAndPasswordComponent: UIView{
     )
     
     idTextField.delegate = self
+    setupToolbar()
     idTextField.setPaddingInTextField()
     
     passwordTextField.delegate = self
     passwordTextField.setPaddingInTextField()
-
+    
     textFieldUnderLine.backgroundColor = .systemGray6
     
     passwordHiddenButton.isHidden = true
     clearIDButton.isHidden = true
     clearPasswordButton.isHidden = true
   }
-
+  
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     applyNib()
@@ -71,14 +74,10 @@ final class InputIDAndPasswordComponent: UIView{
   /// - Parameter sender: password 숨기기 버튼
   @IBAction func onPasswordHidenButtonClicked(_ sender: UIButton) {
     passwordTextField.isSecureTextEntry.toggle()
-  
-    // 배경이 안바뀜
+    
     let buttonImage: String = passwordTextField.isSecureTextEntry ? "eye.slash": "eye"
-    print(#fileID, #function, #line," - \(buttonImage)")
-
-    sender.setBackgroundImage(UIImage(systemName: buttonImage), for: .normal)
+    sender.setImage(UIImage(systemName: buttonImage), for: .normal)
   }
-  
   
   /// TextField 의 내용 없애기
   /// - Parameter sender: 선택한 버튼
@@ -91,7 +90,7 @@ final class InputIDAndPasswordComponent: UIView{
     default:
       return
     }
-    delegate?.activateLoginButton(activate: isIDAndPasswordEmpty())
+    loginButtonDelegate?.activateLoginButton(activate: isIDAndPasswordEmpty())
   }
   
   
@@ -99,6 +98,35 @@ final class InputIDAndPasswordComponent: UIView{
   /// - Returns: 빈칸 여부
   func isIDAndPasswordEmpty() -> Bool{
     return passwordTextField.text?.isEmpty == false && idTextField.text?.isEmpty == false
+  }
+  
+  
+  /// Toolbar 세팅
+  func setupToolbar(){
+    let leftButton1 = UIButton()
+    leftButton1.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+    leftButton1.tintColor = .lightGray
+    leftButton1.addTarget(self, action: #selector(changeTextFieldToID), for: .touchUpInside)
+    
+    let leftButton2 = UIButton()
+    leftButton2.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+    leftButton2.tintColor = .lightGray
+    leftButton2.addTarget(self, action: #selector(changeTextFieldToPassword), for: .touchUpInside)
+    
+    keyboardToolbar = KeyboardToolbar(leftBarButtons: [leftButton1, leftButton2])
+    idTextField.inputAccessoryView = keyboardToolbar
+    passwordTextField.inputAccessoryView = keyboardToolbar
+  }
+  
+  
+  /// Toolbar의 왼쪽 버튼  중 왼쪽 버튼 액션 - idTextField로 포커싱
+  @objc func changeTextFieldToID() {
+    idTextField.becomeFirstResponder()
+  }
+  
+  /// Toolbar의 왼쪽 버튼 중 오른쪽 버튼 액션 - passwordTextField로 포커싱
+  @objc func changeTextFieldToPassword() {
+    passwordTextField.becomeFirstResponder()
   }
 }
 
@@ -135,13 +163,12 @@ extension InputIDAndPasswordComponent: UITextFieldDelegate {
       passwordHiddenButton.isHidden = isTextFieldEmpty
     }
     
-    delegate?.activateLoginButton(activate: isIDAndPasswordEmpty())
+    loginButtonDelegate?.activateLoginButton(activate: isIDAndPasswordEmpty())
   }
   
   /// textField 입력 시 placeHolder Label , textFieldBorder 세팅
   /// - Parameter textField: 해당 textField
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    
     textField.updateTextFieldBorder()
 
     textFieldUnderLine.backgroundColor = .systemGray6
