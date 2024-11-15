@@ -84,6 +84,9 @@
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" red="0.094117647060000004" green="0.62745098040000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCreateAccountBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8D-fF-AKT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -114,11 +117,20 @@
                     <connections>
                         <outlet property="idAndPasswordView" destination="2DP-e2-tTs" id="erN-y8-AeR"/>
                         <outlet property="loginButtonView" destination="V7U-LC-miK" id="hrp-IK-DWq"/>
+                        <segue destination="rRl-fB-Giz" kind="presentation" identifier="AgreementViewController" modalPresentationStyle="fullScreen" id="qaF-15-4qX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+        <!--AgreementViewController-->
+        <scene sceneID="dCF-NN-ftD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AgreementViewController" storyboardName="AgreementViewController" id="rRl-fB-Giz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ir-J1-jL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-75"/>
         </scene>
     </scenes>
     <resources>

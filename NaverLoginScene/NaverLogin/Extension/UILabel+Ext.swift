@@ -27,4 +27,30 @@ extension UILabel {
       target.layoutIfNeeded()
     }
   }
+  
+  
+  /// 라벨의 특정 부분 색상/폰트 변경
+  /// - Parameters:
+  ///   - wantToChange:변경하려는 문자
+  ///   - color: 변경하려는 색상
+  ///   - font: 변경하려는 폰트
+  func changeColor(
+    wantToChange: String,
+    color: UIColor,
+    font: UIFont? = nil
+  ) {
+    guard let originalText = self.attributedText?.mutableCopy() as? NSMutableAttributedString else { return }
+    
+    let range = (originalText.string as NSString).range(of: wantToChange)
+    
+    if range.location != NSNotFound {
+      originalText.addAttribute(.foregroundColor, value: color, range: range)
+      
+      if let font = font {
+        originalText.addAttribute(.font, value: font, range: range)
+      }
+    
+      self.attributedText = originalText
+    }
+  }
 }

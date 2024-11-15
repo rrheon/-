@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController{
   
   @IBOutlet weak var idAndPasswordView: InputIDAndPasswordComponent!
-  
   @IBOutlet weak var loginButtonView: NaverLoginButton!
   
   // 화면이 나타날 때 Notification등록
@@ -59,6 +58,11 @@ class ViewController: UIViewController{
   }
   
   
+  @IBAction func onCreateAccountBtnClicked(_ sender: Any) {
+    performSegue(withIdentifier: "AgreementViewController", sender: sender)
+  }
+  
+  
   /// 키보드가 올라가고 내려갈 때 UI조절
   /// - Parameter height: 키보드 높이
   @objc func updateUIWithKeyboard(height: CGFloat = 0){
@@ -76,6 +80,8 @@ class ViewController: UIViewController{
   @objc func keyboardWillHide(notification : NSNotification) {
     updateUIWithKeyboard(height: 0)
   }
+  
+  
 }
 
 extension ViewController: KeyboardToolbarDelegate {

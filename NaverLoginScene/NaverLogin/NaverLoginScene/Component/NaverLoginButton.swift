@@ -17,9 +17,22 @@ final class NaverLoginButton: UIView {
     naverLoginButton.layer.cornerRadius = 8
   }
   
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    applyNib()
+  }
+  
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     applyNib()
+  }
+  
+  convenience init(title: String = "") {
+    self.init(frame: .zero)
+    
+    DispatchQueue.main.async {
+      self.naverLoginButton.setTitle(title, for: .normal)
+    }
   }
   
   @IBAction func onLoginButtonClicked(_ sender: Any) {

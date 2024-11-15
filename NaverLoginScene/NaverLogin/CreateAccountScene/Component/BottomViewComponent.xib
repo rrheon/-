@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomViewComponent" customModule="NaverLogin" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-5q-lc1">
+                    <rect key="frame" x="40" y="60" width="342" height="16"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cIi-KV-Db3">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="16"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z93-aO-QtD">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Z93-aO-QtD" secondAttribute="height" multiplier="1:1" id="6C4-W6-Nvg"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemGray5Color"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background">
+                                            <imageReference key="image" image="arrowtriangle.left.fill" catalog="system" symbolScale="small"/>
+                                        </backgroundConfiguration>
+                                    </buttonConfiguration>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBG-Ft-H04">
+                                    <rect key="frame" x="46" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="dBG-Ft-H04" secondAttribute="height" multiplier="1:1" id="bw8-5f-OFI"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemGray5Color"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <backgroundConfiguration key="background">
+                                            <imageReference key="image" image="arrowtriangle.right.fill" catalog="system" symbolScale="small"/>
+                                        </backgroundConfiguration>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nU-Ca-1fK">
+                            <rect key="frame" x="326" y="0.0" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8nU-Ca-1fK" secondAttribute="height" multiplier="1:1" id="FUv-x6-Muf"/>
+                            </constraints>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="xmark" catalog="system"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvx-mD-ft8">
+                    <rect key="frame" x="0.0" y="49" width="422" height="1"/>
+                    <color key="backgroundColor" red="0.60784313729999995" green="0.64313725489999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="qpZ-D9-Dy4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="Gvx-mD-ft8" secondAttribute="top" constant="10" id="5hE-OX-F7k"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mV0-5q-lc1" secondAttribute="bottom" constant="10" id="95B-Yv-U12"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mV0-5q-lc1" secondAttribute="trailing" constant="40" id="JyK-AS-hpf"/>
+                <constraint firstItem="Gvx-mD-ft8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QkZ-gJ-dpT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gvx-mD-ft8" secondAttribute="trailing" id="asr-96-ZMV"/>
+                <constraint firstItem="mV0-5q-lc1" firstAttribute="top" secondItem="Gvx-mD-ft8" secondAttribute="bottom" constant="10" id="c6z-bP-dMa"/>
+                <constraint firstItem="mV0-5q-lc1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="lSe-WN-S1A"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="121" y="315"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
