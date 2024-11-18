@@ -9,8 +9,13 @@ import UIKit
 
 class ViewController: UIViewController{
   
+  @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var idAndPasswordView: InputIDAndPasswordComponent!
   @IBOutlet weak var loginButtonView: NaverLoginButton!
+  
+  @IBOutlet weak var idAndPasswordViewHeight: NSLayoutConstraint!
+  
+  @IBOutlet weak var checkIsScrollView: UIView!
   
   // 화면이 나타날 때 Notification등록
   override func viewWillAppear(_ animated: Bool) {
@@ -23,6 +28,7 @@ class ViewController: UIViewController{
       name: UIResponder.keyboardWillShowNotification,
       object: nil
     )
+  
     // 키보드가 내려갔다는 것을 감지
     NotificationCenter.default.addObserver(
       self,
@@ -38,6 +44,10 @@ class ViewController: UIViewController{
     
     idAndPasswordView.loginButtonDelegate = loginButtonView
     idAndPasswordView.keyboardToolbar?.toolbarDelegate = self
+    idAndPasswordView.setupLoignButtonDelegate = self
+    
+    loginButtonView.loginButtonTapped = idAndPasswordView.onDoneButtonClicked
+    
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -63,28 +73,33 @@ class ViewController: UIViewController{
   }
   
   
-  /// 키보드가 올라가고 내려갈 때 UI조절
-  /// - Parameter height: 키보드 높이
-  @objc func updateUIWithKeyboard(height: CGFloat = 0){
-    UIView.animate(withDuration: 0.3) {
-      // 구조체 함수를 이용해서 뷰를 움직인다
-      let transform = CGAffineTransform(translationX: 0, y: height)
-      self.view.transform = transform
-    }
-  }
-  
+  /// 키보드가 올라가고 내려갈 때 스크롤 여부 설정
   @objc func keyboardWillShow(notification : NSNotification) {
-    updateUIWithKeyboard(height: -110)
+    scrollView.isScrollEnabled = true
   }
   
   @objc func keyboardWillHide(notification : NSNotification) {
-    updateUIWithKeyboard(height: 0)
+    scrollView.isScrollEnabled = false
   }
-  
-  
 }
 
-extension ViewController: KeyboardToolbarDelegate {
+extension ViewController: KeyboardToolbarDelegate, setupLoginButtonDelegate {
+  func updateLoginButtonUI(height: CGFloat = 180) {
+    idAndPasswordViewHeight.constant = height
+    
+//    loginButtonViewTopAnchor.constant = height
+  }
+  
+  func showLoginPopupView() {
+    let loginPopupView: UIViewController = LoginPopupViewController()
+    loginPopupView.modalPresentationStyle = .overFullScreen
+    self.present(loginPopupView, animated: true) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        loginPopupView.dismiss(animated: true, completion: nil)
+      }
+    }
+  }
+  
   func onCloseButtonClicked() {
     self.view.endEditing(true)
   }

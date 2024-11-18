@@ -10,6 +10,8 @@ import UIKit
 final class NaverLoginButton: UIView {
   @IBOutlet weak var naverLoginButton: UIButton!
   
+  var loginButtonTapped: (() -> Void)? = nil
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -35,8 +37,13 @@ final class NaverLoginButton: UIView {
     }
   }
   
+
+  // TODO: 로그인 버튼을 눌렀을 때 성공 / 에러처리
   @IBAction func onLoginButtonClicked(_ sender: Any) {
     print(#fileID, #function, #line," - 로그인 버튼 탭")
+    if let _loginButtonTapped = loginButtonTapped {
+      _loginButtonTapped()
+    }
   }
 }
 

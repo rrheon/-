@@ -14,6 +14,8 @@ protocol KeyboardToolbarDelegate: AnyObject {
 final class KeyboardToolbar: UIToolbar {
   weak var toolbarDelegate: KeyboardToolbarDelegate?
   
+  weak var textFieldLine: UIView? = nil
+  
   private lazy var closeButton: UIButton = {
     let button = UIButton()
     button.setTitle("닫기", for: .normal)
@@ -65,6 +67,10 @@ final class KeyboardToolbar: UIToolbar {
 
   @objc func onCloseButtonClicked(){
     toolbarDelegate?.onCloseButtonClicked()
+    
+    if let line = textFieldLine {
+      line.borderWidth = 1
+    }
   }
 }
 
