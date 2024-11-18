@@ -13,16 +13,19 @@ protocol LoginButtonDelegate: AnyObject {
   func activateLoginButton(activate: Bool)
 }
 
+// 텍스트 필드 레이어 다 없애기, view로 감싸고 위를 둥글게, 밑으로 내리기
 
 final class InputIDAndPasswordComponent: UIView{
   weak var loginButtonDelegate: LoginButtonDelegate?
   
+  @IBOutlet weak var enterIDView: UIView!
   @IBOutlet weak var idTextField: UITextField!
   @IBOutlet weak var idTextFieldPlaceHolderLabel: UILabel!
   @IBOutlet weak var idTextFieldPlaceHolderTopAnchor: NSLayoutConstraint!
   
   @IBOutlet weak var textFieldUnderLine: UIView!
   
+  @IBOutlet weak var enterPasswordView: UIView!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var passwordTextFieldPlaceHolderLabel: UILabel!
   @IBOutlet weak var passwordTextFieldPlaceHolderTopAnchor: NSLayoutConstraint!
@@ -39,17 +42,18 @@ final class InputIDAndPasswordComponent: UIView{
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    // textField의 특정 모서리 조절
-    idTextField.setupTextFieldCornerRadius(
+/// view의 특정 모서리 조절
+    enterIDView.setupUIViewCornerRadius(
       leftCorner: .layerMinXMinYCorner,
       rightCorner: .layerMaxXMinYCorner
     )
     
-    passwordTextField.setupTextFieldCornerRadius(
+    enterPasswordView.setupUIViewCornerRadius(
       leftCorner: .layerMinXMaxYCorner,
       rightCorner: .layerMaxXMaxYCorner
     )
     
+
     idTextField.delegate = self
     setupToolbar()
     idTextField.setPaddingInTextField()
@@ -57,7 +61,6 @@ final class InputIDAndPasswordComponent: UIView{
     passwordTextField.delegate = self
     passwordTextField.setPaddingInTextField()
     
-    textFieldUnderLine.backgroundColor = .systemGray6
     
     passwordHiddenButton.isHidden = true
     clearIDButton.isHidden = true
@@ -169,9 +172,9 @@ extension InputIDAndPasswordComponent: UITextFieldDelegate {
   /// textField 입력 시 placeHolder Label , textFieldBorder 세팅
   /// - Parameter textField: 해당 textField
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    textField.updateTextFieldBorder()
-
-    textFieldUnderLine.backgroundColor = .systemGray6
+    let selectedView: UIView = textField == idTextField ? enterIDView : enterPasswordView
+    selectedView.updateUIViewBorder()
+    textFieldUnderLine.borderWidth = 0
 
     var placeHolderLabel: UILabel? = nil
     var topAnchor: NSLayoutConstraint? = nil
@@ -182,15 +185,17 @@ extension InputIDAndPasswordComponent: UITextFieldDelegate {
     guard let _placeHolderLabel = placeHolderLabel,
           let _topAnchor = topAnchor else { return }
     
-    _placeHolderLabel.updateTextFieldHolder(target: self, fontSize: 12, _topAnchor, constant: 10)
+    _placeHolderLabel.updateTextFieldHolder(target: self, fontSize: 12, _topAnchor, constant: 15)
   }
   
   
   /// textField 입력 종료 시 placeHolder Label , textFieldBorder 세팅
   /// - Parameter textField: 해당 textField
   func textFieldDidEndEditing(_ textField: UITextField) {
-    textField.updateTextFieldBorder(borderWidth: 1, borderColor: UIColor.lightGray.cgColor)
-    textFieldUnderLine.backgroundColor = .systemGray6
+    let selectedView: UIView = textField == idTextField ? enterIDView : enterPasswordView
+  
+    selectedView.updateUIViewBorder(borderWidth: 1, borderColor: UIColor.lightGray.cgColor)
+    
 
     if textField == idTextField && textField.text?.isEmpty == true {
       idTextFieldPlaceHolderLabel.updateTextFieldHolder(

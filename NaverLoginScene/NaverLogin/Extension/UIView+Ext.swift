@@ -60,4 +60,28 @@ extension UIView {
     ])
   }
   
+  ///  특정 모서리 둥글게 만들기
+  /// - Parameters:
+  ///   - leftCorner: 왼쪽 코너
+  ///   - rightCorner: 오른쪽 코너
+  func setupUIViewCornerRadius(
+    cornerRadious: CGFloat = 8,
+    leftCorner: CACornerMask,
+    rightCorner: CACornerMask
+  ){
+    self.layer.cornerRadius = cornerRadious
+    self.layer.maskedCorners = CACornerMask(arrayLiteral: leftCorner, rightCorner)
+  }
+  
+  /// UIView의 Border 색상, 두께 조절
+  /// - Parameters:
+  ///   - borderWidth: border의 width
+  ///   - borderColor: border의 color
+  func updateUIViewBorder(
+    borderWidth: CGFloat = 4,
+    borderColor: CGColor = UIColor.systemGreen.cgColor
+  ){
+    self.layer.borderWidth = borderWidth
+    self.layer.borderColor = borderColor
+  }
 }
