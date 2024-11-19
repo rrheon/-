@@ -82,6 +82,9 @@ class ViewController: UIViewController{
   @objc func keyboardWillHide(notification : NSNotification) {
     scrollView.isScrollEnabled = false
     scrollView.setContentOffset(.zero, animated: true)
+    
+    // 아이디/비밀번호 입력 view의 가운데 line 생성
+    idAndPasswordView.textFieldUnderLine.borderWidth = 1
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

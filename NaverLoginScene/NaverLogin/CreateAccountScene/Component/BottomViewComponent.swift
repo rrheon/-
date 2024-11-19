@@ -7,7 +7,16 @@
 
 import UIKit
 
+
+/// bottomView Delegate
+protocol BottomViewDelegate: AnyObject {
+  func onDismissButtonCliked()
+}
+
 final class BottomViewComponent: UIView {
+
+  weak var delegate: BottomViewDelegate?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
   }
@@ -24,5 +33,10 @@ final class BottomViewComponent: UIView {
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     applyNib()
+  }
+  
+  
+  @IBAction func onDismissButtonClicked(_ sender: Any) {
+    delegate?.onDismissButtonCliked()
   }
 }
