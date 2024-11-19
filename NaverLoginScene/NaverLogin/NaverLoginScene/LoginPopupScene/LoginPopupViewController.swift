@@ -22,6 +22,13 @@ final class LoginPopupViewController: UIViewController {
   
   private lazy var lottieView: UIView = UIView()
   
+  let animationView: LottieAnimationView = {
+    let aniView = LottieAnimationView(name: "LoadingAnimation")
+    aniView.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
+    aniView.contentMode = .scaleAspectFill
+    return aniView
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -34,9 +41,9 @@ final class LoginPopupViewController: UIViewController {
     popupView.layer.masksToBounds = true
     NSLayoutConstraint.activate([
       popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-      popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-      popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-      popupView.heightAnchor.constraint(equalToConstant: 120)
+      popupView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+      popupView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+      popupView.heightAnchor.constraint(equalToConstant: 130)
     ])
     
     popupView.addSubview(loginLabel)
@@ -44,19 +51,24 @@ final class LoginPopupViewController: UIViewController {
     NSLayoutConstraint.activate([
       loginLabel.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 10),
       loginLabel.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -10),
-      loginLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 0)
+      loginLabel.topAnchor.constraint(equalTo: popupView.topAnchor, constant: 20),
+      loginLabel.heightAnchor.constraint(equalToConstant: 20)
     ])
     
-
-    popupView.addSubview(lottieView)
-    lottieView.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-          lottieView.centerXAnchor.constraint(equalTo: popupView.centerXAnchor),
-          lottieView.centerYAnchor.constraint(equalTo: popupView.centerYAnchor),
-          lottieView.widthAnchor.constraint(equalTo: popupView.widthAnchor, multiplier: 0.8),
-          lottieView.heightAnchor.constraint(equalTo: popupView.heightAnchor, multiplier: 0.8)
-      ])
+    popupView.addSubview(animationView)
     
-    setViewAndGif(showView: lottieView, jsonName: "LoadingAnimation")
+    animationView.play()
+    // 루프 돌기
+    animationView.loopMode = .loop
+    // 재생 속도
+    animationView.animationSpeed = 1.5
+    
+    animationView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      animationView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 30),
+      animationView.leadingAnchor.constraint(equalTo: popupView.leadingAnchor, constant: 10),
+      animationView.trailingAnchor.constraint(equalTo: popupView.trailingAnchor, constant: -10),
+      animationView.heightAnchor.constraint(equalToConstant: 50)
+    ])
   }
 }

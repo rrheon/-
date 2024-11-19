@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController{
   
   @IBOutlet weak var scrollView: UIScrollView!
@@ -80,22 +81,34 @@ class ViewController: UIViewController{
   
   @objc func keyboardWillHide(notification : NSNotification) {
     scrollView.isScrollEnabled = false
+    scrollView.setContentOffset(.zero, animated: true)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "SuccessToLoginViewController" {
+      if let successToLoginVC = segue.destination as? SuccessToLoginViewController{
+        successToLoginVC.userID = "testID"
+      }
+    }
   }
 }
 
 extension ViewController: KeyboardToolbarDelegate, setupLoginButtonDelegate {
   func updateLoginButtonUI(height: CGFloat = 180) {
     idAndPasswordViewHeight.constant = height
-    
-//    loginButtonViewTopAnchor.constant = height
   }
   
-  func showLoginPopupView() {
+  /// 로그인  팝업 띄우기 -> 1초뒤에 사라짐
+  func showLoginPopupView(successToLogin: Bool = false) {
     let loginPopupView: UIViewController = LoginPopupViewController()
     loginPopupView.modalPresentationStyle = .overFullScreen
     self.present(loginPopupView, animated: true) {
       DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
         loginPopupView.dismiss(animated: true, completion: nil)
+        
+        if successToLogin {
+          self.performSegue(withIdentifier: "SuccessToLoginViewController", sender: nil)
+        }
       }
     }
   }

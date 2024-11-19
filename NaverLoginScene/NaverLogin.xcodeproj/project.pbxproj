@@ -22,10 +22,12 @@
 		EECB21972CE59089004A992E /* AgreementViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECB21962CE59089004A992E /* AgreementViewController.storyboard */; };
 		EECB21992CE59F2A004A992E /* AgreementComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECB21982CE59F2A004A992E /* AgreementComponent.xib */; };
 		EECB219B2CE59F34004A992E /* AgreementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB219A2CE59F34004A992E /* AgreementComponent.swift */; };
+		EED598992CEC21CB00A0EDF5 /* LoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */; };
+		EED5989B2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */; };
+		EED5989D2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */; };
 		EEED4A1A2CEB5C9D00DF6AFE /* LoginCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED4A192CEB5C9D00DF6AFE /* LoginCase.swift */; };
 		EEED4A202CEB6A8B00DF6AFE /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED4A1F2CEB6A8B00DF6AFE /* LoginPopupViewController.swift */; };
 		EEED4A232CEB6ABA00DF6AFE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEED4A222CEB6ABA00DF6AFE /* Lottie */; };
-		EEED4A252CEB6B1E00DF6AFE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED4A242CEB6B1E00DF6AFE /* UIViewController+Ext.swift */; };
 		EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */; };
 		EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */; };
 		EEFAF6D82CE21FB5003C1F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D72CE21FB5003C1F83 /* ViewController.swift */; };
@@ -54,9 +56,11 @@
 		EECB21962CE59089004A992E /* AgreementViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgreementViewController.storyboard; sourceTree = "<group>"; };
 		EECB21982CE59F2A004A992E /* AgreementComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgreementComponent.xib; sourceTree = "<group>"; };
 		EECB219A2CE59F34004A992E /* AgreementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementComponent.swift; sourceTree = "<group>"; };
+		EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoadingAnimation.json; sourceTree = "<group>"; };
+		EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessToLoginViewController.storyboard; sourceTree = "<group>"; };
+		EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessToLoginViewController.swift; sourceTree = "<group>"; };
 		EEED4A192CEB5C9D00DF6AFE /* LoginCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCase.swift; sourceTree = "<group>"; };
 		EEED4A1F2CEB6A8B00DF6AFE /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
-		EEED4A242CEB6B1E00DF6AFE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		EEFAF6D02CE21FB5003C1F83 /* NaverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE08CF102CEC4DCB00983C8A /* SuccessToLoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */,
+				EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */,
+			);
+			path = SuccessToLoginScene;
+			sourceTree = "<group>";
+		};
 		EE1E4F642CE7320B0052BD6B /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,12 +174,14 @@
 				EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */,
 				EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */,
 				EE9EE8992CE360B400C46B82 /* keyboardToolbar.swift */,
+				EE08CF102CEC4DCB00983C8A /* SuccessToLoginScene */,
 				EECB21922CE58FEC004A992E /* NaverLoginScene */,
 				EECB21932CE5900E004A992E /* CreateAccountScene */,
 				EEFAF6EF2CE250BA003C1F83 /* Extension */,
 				EEFAF6DC2CE21FB6003C1F83 /* Assets.xcassets */,
 				EEFAF6DE2CE21FB6003C1F83 /* LaunchScreen.storyboard */,
 				EEFAF6E12CE21FB6003C1F83 /* Info.plist */,
+				EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */,
 			);
 			path = NaverLogin;
 			sourceTree = "<group>";
@@ -178,7 +193,6 @@
 				EEFAF6EB2CE24EA4003C1F83 /* UIView+Ext.swift */,
 				EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */,
 				EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */,
-				EEED4A242CEB6B1E00DF6AFE /* UIViewController+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -249,9 +263,11 @@
 			files = (
 				EE9EE8942CE342DD00C46B82 /* NaverLoginButton.xib in Resources */,
 				EE0C38CD2CE647B200DAB0B8 /* AcceptEventComponent.xib in Resources */,
+				EED5989B2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard in Resources */,
 				EEFAF6DD2CE21FB6003C1F83 /* Assets.xcassets in Resources */,
 				EECB21992CE59F2A004A992E /* AgreementComponent.xib in Resources */,
 				EE9EE8922CE2F8B900C46B82 /* NaverLogoButton.xib in Resources */,
+				EED598992CEC21CB00A0EDF5 /* LoadingAnimation.json in Resources */,
 				EECB21972CE59089004A992E /* AgreementViewController.storyboard in Resources */,
 				EEFAF6E02CE21FB6003C1F83 /* Base in Resources */,
 				EEFAF6E82CE24D01003C1F83 /* InputIDAndPasswordComponent.xib in Resources */,
@@ -275,7 +291,6 @@
 				EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */,
 				EEFAF6EC2CE24EA4003C1F83 /* UIView+Ext.swift in Sources */,
 				EE9EE89A2CE360B400C46B82 /* keyboardToolbar.swift in Sources */,
-				EEED4A252CEB6B1E00DF6AFE /* UIViewController+Ext.swift in Sources */,
 				EEFAF6EA2CE24E59003C1F83 /* InputIDAndPasswordComponent.swift in Sources */,
 				EE9EE8982CE3498B00C46B82 /* UIColor+Ext.swift in Sources */,
 				EECB21952CE59031004A992E /* AgreementViewController.swift in Sources */,
@@ -283,6 +298,7 @@
 				EECB219B2CE59F34004A992E /* AgreementComponent.swift in Sources */,
 				EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */,
 				EEED4A202CEB6A8B00DF6AFE /* LoginPopupViewController.swift in Sources */,
+				EED5989D2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift in Sources */,
 				EE9EE88E2CE2F2EE00C46B82 /* UILabel+Ext.swift in Sources */,
 				EEED4A1A2CEB5C9D00DF6AFE /* LoginCase.swift in Sources */,
 			);

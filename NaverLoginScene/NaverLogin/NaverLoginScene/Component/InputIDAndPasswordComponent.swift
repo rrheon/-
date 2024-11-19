@@ -14,17 +14,23 @@ protocol LoginButtonDelegate: AnyObject {
 }
 
 
-/// 로그인 실패 여부에 따른 로그인 버튼 UI 업데이트
 protocol setupLoginButtonDelegate: AnyObject{
+  /// 로그인 실패 여부에 따른 로그인 버튼 UI 업데이트
+  /// - Parameter height: 원하는 높이
+  
   func updateLoginButtonUI(height: CGFloat)
-  func showLoginPopupView()
+
+  /// 로그인 시 팝업 띄우기
+  ///  - Parameter successToLogin: 로그인 성공 여부
+  func showLoginPopupView(successToLogin: Bool)
 }
 
 final class InputIDAndPasswordComponent: UIView{
   weak var loginButtonDelegate: LoginButtonDelegate?
   weak var setupLoignButtonDelegate: setupLoginButtonDelegate?
 
-  let loginMockup: (id: String, password: String) = ("testID", "123456789")
+  /// 로그인 성공 목업
+  let loginMockup: (id: String, password: String) = ("testID", "1")
 
   @IBOutlet weak var enterIDView: UIView!
   @IBOutlet weak var idTextField: UITextField!
@@ -257,21 +263,23 @@ extension InputIDAndPasswordComponent: UITextFieldDelegate {
       loginMockup: loginMockup
     )
     
-    setupLoignButtonDelegate?.showLoginPopupView()
+    let alertStatus: (hidden: Bool, message: String, height: CGFloat)
     
     switch loginValidationResult {
     case .idEmpty:
       idTextField.becomeFirstResponder()
-      setupAlertLabel(message: AlertLabelContentCase.idError.message, height: 180)
+      alertStatus = (false, AlertLabelContentCase.idError.message, 180)
     case .passwordEmpty:
-      setupAlertLabel(message: AlertLabelContentCase.passwordError.message, height: 180)
+      alertStatus = (false, AlertLabelContentCase.passwordError.message, 180)
     case .successToLogin:
-      print(#fileID, #function, #line," - 로그인 성공")
+      alertStatus = (true, "", 150)
     case .failToLogin:
-      print(#fileID, #function, #line," - 로그인 실패")
-      setupAlertLabel(message: AlertLabelContentCase.failToLogin.message, height: 200)
+      alertStatus = (false, AlertLabelContentCase.failToLogin.message, 220)
     }
     
+    setupAlertLabel(hidden: alertStatus.hidden, message: alertStatus.message, height: alertStatus.height)
+
+    setupLoignButtonDelegate?.showLoginPopupView(successToLogin: alertStatus.hidden)
   }
   
   

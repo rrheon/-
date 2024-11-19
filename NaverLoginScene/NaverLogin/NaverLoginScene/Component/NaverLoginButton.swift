@@ -51,7 +51,6 @@ extension NaverLoginButton: LoginButtonDelegate {
   /// 버튼의 색상 및 버튼 활성화 설정
   /// - Parameter activate: 활성화 여부
   func activateLoginButton(activate: Bool) {
-    print(#fileID, #function, #line, " - \(activate)")
     
     // 버튼 활성화 여부에 따라 배경색과 텍스트 색상 설정
     naverLoginButton.backgroundColor = activate ? .activateButtonColor : .unActivateButtonColor
