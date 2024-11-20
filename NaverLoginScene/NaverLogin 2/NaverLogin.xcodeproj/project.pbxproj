@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE0C38CD2CE647B200DAB0B8 /* AcceptEventComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0C38CC2CE647B200DAB0B8 /* AcceptEventComponent.xib */; };
+		EE0C38CF2CE647BE00DAB0B8 /* AcceptEventComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C38CE2CE647BE00DAB0B8 /* AcceptEventComponent.swift */; };
+		EE2433E92CEDD07D00199B69 /* InputUserInfomationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2433E82CEDD07D00199B69 /* InputUserInfomationViewController.storyboard */; };
+		EE2433EB2CEDD08D00199B69 /* InputUserInfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2433EA2CEDD08D00199B69 /* InputUserInfomationViewController.swift */; };
+		EE49AFDE2CE6CC5D0098C34A /* BottomViewComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE49AFDD2CE6CC5D0098C34A /* BottomViewComponent.xib */; };
+		EE49AFE02CE6CC6E0098C34A /* BottomViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE49AFDF2CE6CC6E0098C34A /* BottomViewComponent.swift */; };
+		EE9EE88E2CE2F2EE00C46B82 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */; };
+		EE9EE8902CE2F61800C46B82 /* NaverLogoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */; };
+		EE9EE8922CE2F8B900C46B82 /* NaverLogoButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */; };
+		EE9EE8942CE342DD00C46B82 /* NaverLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */; };
+		EE9EE8962CE3435200C46B82 /* NaverLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */; };
+		EE9EE8982CE3498B00C46B82 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */; };
+		EE9EE89A2CE360B400C46B82 /* keyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EE8992CE360B400C46B82 /* keyboardToolbar.swift */; };
+		EECB21952CE59031004A992E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB21942CE59031004A992E /* AgreementViewController.swift */; };
+		EECB21972CE59089004A992E /* AgreementViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECB21962CE59089004A992E /* AgreementViewController.storyboard */; };
+		EECB21992CE59F2A004A992E /* AgreementComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECB21982CE59F2A004A992E /* AgreementComponent.xib */; };
+		EECB219B2CE59F34004A992E /* AgreementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB219A2CE59F34004A992E /* AgreementComponent.swift */; };
+		EED598992CEC21CB00A0EDF5 /* LoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */; };
+		EED5989B2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */; };
+		EED5989D2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */; };
+		EEED4A1A2CEB5C9D00DF6AFE /* LoginCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED4A192CEB5C9D00DF6AFE /* LoginCase.swift */; };
+		EEED4A202CEB6A8B00DF6AFE /* LoginPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED4A1F2CEB6A8B00DF6AFE /* LoginPopupViewController.swift */; };
+		EEED4A232CEB6ABA00DF6AFE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EEED4A222CEB6ABA00DF6AFE /* Lottie */; };
+		EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */; };
+		EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */; };
+		EEFAF6D82CE21FB5003C1F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6D72CE21FB5003C1F83 /* ViewController.swift */; };
+		EEFAF6DB2CE21FB5003C1F83 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EEFAF6DA2CE21FB5003C1F83 /* Base */; };
+		EEFAF6DD2CE21FB6003C1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFAF6DC2CE21FB6003C1F83 /* Assets.xcassets */; };
+		EEFAF6E02CE21FB6003C1F83 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EEFAF6DF2CE21FB6003C1F83 /* Base */; };
+		EEFAF6E82CE24D01003C1F83 /* InputIDAndPasswordComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFAF6E72CE24D01003C1F83 /* InputIDAndPasswordComponent.xib */; };
+		EEFAF6EA2CE24E59003C1F83 /* InputIDAndPasswordComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6E92CE24E59003C1F83 /* InputIDAndPasswordComponent.swift */; };
+		EEFAF6EC2CE24EA4003C1F83 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6EB2CE24EA4003C1F83 /* UIView+Ext.swift */; };
+		EEFAF6EE2CE24FE1003C1F83 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFAF6ED2CE24FE1003C1F83 /* UITextField+Ext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE0C38CC2CE647B200DAB0B8 /* AcceptEventComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AcceptEventComponent.xib; sourceTree = "<group>"; };
+		EE0C38CE2CE647BE00DAB0B8 /* AcceptEventComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptEventComponent.swift; sourceTree = "<group>"; };
+		EE2433E82CEDD07D00199B69 /* InputUserInfomationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputUserInfomationViewController.storyboard; sourceTree = "<group>"; };
+		EE2433EA2CEDD08D00199B69 /* InputUserInfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUserInfomationViewController.swift; sourceTree = "<group>"; };
+		EE49AFDD2CE6CC5D0098C34A /* BottomViewComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomViewComponent.xib; sourceTree = "<group>"; };
+		EE49AFDF2CE6CC6E0098C34A /* BottomViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewComponent.swift; sourceTree = "<group>"; };
+		EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogoButton.swift; sourceTree = "<group>"; };
+		EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NaverLogoButton.xib; sourceTree = "<group>"; };
+		EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NaverLoginButton.xib; sourceTree = "<group>"; };
+		EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginButton.swift; sourceTree = "<group>"; };
+		EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		EE9EE8992CE360B400C46B82 /* keyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardToolbar.swift; sourceTree = "<group>"; };
+		EECB21942CE59031004A992E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
+		EECB21962CE59089004A992E /* AgreementViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgreementViewController.storyboard; sourceTree = "<group>"; };
+		EECB21982CE59F2A004A992E /* AgreementComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgreementComponent.xib; sourceTree = "<group>"; };
+		EECB219A2CE59F34004A992E /* AgreementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementComponent.swift; sourceTree = "<group>"; };
+		EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LoadingAnimation.json; sourceTree = "<group>"; };
+		EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessToLoginViewController.storyboard; sourceTree = "<group>"; };
+		EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessToLoginViewController.swift; sourceTree = "<group>"; };
+		EEED4A192CEB5C9D00DF6AFE /* LoginCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCase.swift; sourceTree = "<group>"; };
+		EEED4A1F2CEB6A8B00DF6AFE /* LoginPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopupViewController.swift; sourceTree = "<group>"; };
+		EEFAF6D02CE21FB5003C1F83 /* NaverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EEFAF6D72CE21FB5003C1F83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEFAF6DA2CE21FB5003C1F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEFAF6DC2CE21FB6003C1F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEFAF6DF2CE21FB6003C1F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEFAF6E12CE21FB6003C1F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFAF6E72CE24D01003C1F83 /* InputIDAndPasswordComponent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputIDAndPasswordComponent.xib; sourceTree = "<group>"; };
+		EEFAF6E92CE24E59003C1F83 /* InputIDAndPasswordComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputIDAndPasswordComponent.swift; sourceTree = "<group>"; };
+		EEFAF6EB2CE24EA4003C1F83 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		EEFAF6ED2CE24FE1003C1F83 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEFAF6CD2CE21FB5003C1F83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEED4A232CEB6ABA00DF6AFE /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE08CF102CEC4DCB00983C8A /* SuccessToLoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				EED5989A2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard */,
+				EED5989C2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift */,
+			);
+			path = SuccessToLoginScene;
+			sourceTree = "<group>";
+		};
+		EE1E4F642CE7320B0052BD6B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EECB21982CE59F2A004A992E /* AgreementComponent.xib */,
+				EECB219A2CE59F34004A992E /* AgreementComponent.swift */,
+				EE0C38CC2CE647B200DAB0B8 /* AcceptEventComponent.xib */,
+				EE0C38CE2CE647BE00DAB0B8 /* AcceptEventComponent.swift */,
+				EE49AFDD2CE6CC5D0098C34A /* BottomViewComponent.xib */,
+				EE49AFDF2CE6CC6E0098C34A /* BottomViewComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EE2433E62CEDD04700199B69 /* AgreementScene */ = {
+			isa = PBXGroup;
+			children = (
+				EECB21962CE59089004A992E /* AgreementViewController.storyboard */,
+				EECB21942CE59031004A992E /* AgreementViewController.swift */,
+				EE1E4F642CE7320B0052BD6B /* Component */,
+			);
+			path = AgreementScene;
+			sourceTree = "<group>";
+		};
+		EE2433E72CEDD05400199B69 /* InputUserInfomationScene */ = {
+			isa = PBXGroup;
+			children = (
+				EE2433E82CEDD07D00199B69 /* InputUserInfomationViewController.storyboard */,
+				EE2433EA2CEDD08D00199B69 /* InputUserInfomationViewController.swift */,
+			);
+			path = InputUserInfomationScene;
+			sourceTree = "<group>";
+		};
+		EE9EE88C2CE250DF00C46B82 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EE9EE8912CE2F8B900C46B82 /* NaverLogoButton.xib */,
+				EE9EE88F2CE2F61800C46B82 /* NaverLogoButton.swift */,
+				EEFAF6E72CE24D01003C1F83 /* InputIDAndPasswordComponent.xib */,
+				EEFAF6E92CE24E59003C1F83 /* InputIDAndPasswordComponent.swift */,
+				EE9EE8932CE342DD00C46B82 /* NaverLoginButton.xib */,
+				EE9EE8952CE3435200C46B82 /* NaverLoginButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EECB21922CE58FEC004A992E /* NaverLoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				EEFAF6D92CE21FB5003C1F83 /* Main.storyboard */,
+				EEFAF6D72CE21FB5003C1F83 /* ViewController.swift */,
+				EEED4A192CEB5C9D00DF6AFE /* LoginCase.swift */,
+				EEED4A262CEB6C5F00DF6AFE /* LoginPopupScene */,
+				EE9EE88C2CE250DF00C46B82 /* Component */,
+			);
+			path = NaverLoginScene;
+			sourceTree = "<group>";
+		};
+		EECB21932CE5900E004A992E /* CreateAccountScene */ = {
+			isa = PBXGroup;
+			children = (
+				EE2433E62CEDD04700199B69 /* AgreementScene */,
+				EE2433E72CEDD05400199B69 /* InputUserInfomationScene */,
+			);
+			path = CreateAccountScene;
+			sourceTree = "<group>";
+		};
+		EEED4A262CEB6C5F00DF6AFE /* LoginPopupScene */ = {
+			isa = PBXGroup;
+			children = (
+				EEED4A1F2CEB6A8B00DF6AFE /* LoginPopupViewController.swift */,
+			);
+			path = LoginPopupScene;
+			sourceTree = "<group>";
+		};
+		EEFAF6C72CE21FB5003C1F83 = {
+			isa = PBXGroup;
+			children = (
+				EEFAF6D22CE21FB5003C1F83 /* NaverLogin */,
+				EEFAF6D12CE21FB5003C1F83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEFAF6D12CE21FB5003C1F83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEFAF6D02CE21FB5003C1F83 /* NaverLogin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEFAF6D22CE21FB5003C1F83 /* NaverLogin */ = {
+			isa = PBXGroup;
+			children = (
+				EEFAF6D32CE21FB5003C1F83 /* AppDelegate.swift */,
+				EEFAF6D52CE21FB5003C1F83 /* SceneDelegate.swift */,
+				EE9EE8992CE360B400C46B82 /* keyboardToolbar.swift */,
+				EE08CF102CEC4DCB00983C8A /* SuccessToLoginScene */,
+				EECB21922CE58FEC004A992E /* NaverLoginScene */,
+				EECB21932CE5900E004A992E /* CreateAccountScene */,
+				EEFAF6EF2CE250BA003C1F83 /* Extension */,
+				EEFAF6DC2CE21FB6003C1F83 /* Assets.xcassets */,
+				EEFAF6DE2CE21FB6003C1F83 /* LaunchScreen.storyboard */,
+				EEFAF6E12CE21FB6003C1F83 /* Info.plist */,
+				EED598982CEC21CB00A0EDF5 /* LoadingAnimation.json */,
+			);
+			path = NaverLogin;
+			sourceTree = "<group>";
+		};
+		EEFAF6EF2CE250BA003C1F83 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EEFAF6ED2CE24FE1003C1F83 /* UITextField+Ext.swift */,
+				EEFAF6EB2CE24EA4003C1F83 /* UIView+Ext.swift */,
+				EE9EE8972CE3498B00C46B82 /* UIColor+Ext.swift */,
+				EE9EE88D2CE2F2EE00C46B82 /* UILabel+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEFAF6CF2CE21FB5003C1F83 /* NaverLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFAF6E42CE21FB6003C1F83 /* Build configuration list for PBXNativeTarget "NaverLogin" */;
+			buildPhases = (
+				EEFAF6CC2CE21FB5003C1F83 /* Sources */,
+				EEFAF6CD2CE21FB5003C1F83 /* Frameworks */,
+				EEFAF6CE2CE21FB5003C1F83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaverLogin;
+			packageProductDependencies = (
+				EEED4A222CEB6ABA00DF6AFE /* Lottie */,
+			);
+			productName = NaverLogin;
+			productReference = EEFAF6D02CE21FB5003C1F83 /* NaverLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEFAF6C82CE21FB5003C1F83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					EEFAF6CF2CE21FB5003C1F83 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = EEFAF6CB2CE21FB5003C1F83 /* Build configuration list for PBXProject "NaverLogin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEFAF6C72CE21FB5003C1F83;
+			packageReferences = (
+				EEED4A212CEB6ABA00DF6AFE /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
+			productRefGroup = EEFAF6D12CE21FB5003C1F83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEFAF6CF2CE21FB5003C1F83 /* NaverLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEFAF6CE2CE21FB5003C1F83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9EE8942CE342DD00C46B82 /* NaverLoginButton.xib in Resources */,
+				EE0C38CD2CE647B200DAB0B8 /* AcceptEventComponent.xib in Resources */,
+				EED5989B2CEC4BBF00A0EDF5 /* SuccessToLoginViewController.storyboard in Resources */,
+				EEFAF6DD2CE21FB6003C1F83 /* Assets.xcassets in Resources */,
+				EECB21992CE59F2A004A992E /* AgreementComponent.xib in Resources */,
+				EE9EE8922CE2F8B900C46B82 /* NaverLogoButton.xib in Resources */,
+				EED598992CEC21CB00A0EDF5 /* LoadingAnimation.json in Resources */,
+				EECB21972CE59089004A992E /* AgreementViewController.storyboard in Resources */,
+				EEFAF6E02CE21FB6003C1F83 /* Base in Resources */,
+				EEFAF6E82CE24D01003C1F83 /* InputIDAndPasswordComponent.xib in Resources */,
+				EEFAF6DB2CE21FB5003C1F83 /* Base in Resources */,
+				EE2433E92CEDD07D00199B69 /* InputUserInfomationViewController.storyboard in Resources */,
+				EE49AFDE2CE6CC5D0098C34A /* BottomViewComponent.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEFAF6CC2CE21FB5003C1F83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE2433EB2CEDD08D00199B69 /* InputUserInfomationViewController.swift in Sources */,
+				EEFAF6D82CE21FB5003C1F83 /* ViewController.swift in Sources */,
+				EE9EE8902CE2F61800C46B82 /* NaverLogoButton.swift in Sources */,
+				EEFAF6EE2CE24FE1003C1F83 /* UITextField+Ext.swift in Sources */,
+				EE0C38CF2CE647BE00DAB0B8 /* AcceptEventComponent.swift in Sources */,
+				EE9EE8962CE3435200C46B82 /* NaverLoginButton.swift in Sources */,
+				EEFAF6D42CE21FB5003C1F83 /* AppDelegate.swift in Sources */,
+				EEFAF6EC2CE24EA4003C1F83 /* UIView+Ext.swift in Sources */,
+				EE9EE89A2CE360B400C46B82 /* keyboardToolbar.swift in Sources */,
+				EEFAF6EA2CE24E59003C1F83 /* InputIDAndPasswordComponent.swift in Sources */,
+				EE9EE8982CE3498B00C46B82 /* UIColor+Ext.swift in Sources */,
+				EECB21952CE59031004A992E /* AgreementViewController.swift in Sources */,
+				EE49AFE02CE6CC6E0098C34A /* BottomViewComponent.swift in Sources */,
+				EECB219B2CE59F34004A992E /* AgreementComponent.swift in Sources */,
+				EEFAF6D62CE21FB5003C1F83 /* SceneDelegate.swift in Sources */,
+				EEED4A202CEB6A8B00DF6AFE /* LoginPopupViewController.swift in Sources */,
+				EED5989D2CEC4BD200A0EDF5 /* SuccessToLoginViewController.swift in Sources */,
+				EE9EE88E2CE2F2EE00C46B82 /* UILabel+Ext.swift in Sources */,
+				EEED4A1A2CEB5C9D00DF6AFE /* LoginCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEFAF6D92CE21FB5003C1F83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFAF6DA2CE21FB5003C1F83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEFAF6DE2CE21FB6003C1F83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEFAF6DF2CE21FB6003C1F83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEFAF6E22CE21FB6003C1F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEFAF6E32CE21FB6003C1F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEFAF6E52CE21FB6003C1F83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YQC68LN7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NaverLogin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongheon.NaverLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEFAF6E62CE21FB6003C1F83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YQC68LN7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NaverLogin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongheon.NaverLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEFAF6CB2CE21FB5003C1F83 /* Build configuration list for PBXProject "NaverLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFAF6E22CE21FB6003C1F83 /* Debug */,
+				EEFAF6E32CE21FB6003C1F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFAF6E42CE21FB6003C1F83 /* Build configuration list for PBXNativeTarget "NaverLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFAF6E52CE21FB6003C1F83 /* Debug */,
+				EEFAF6E62CE21FB6003C1F83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEED4A212CEB6ABA00DF6AFE /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEED4A222CEB6ABA00DF6AFE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEED4A212CEB6ABA00DF6AFE /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EEFAF6C82CE21FB5003C1F83 /* Project object */;
+}

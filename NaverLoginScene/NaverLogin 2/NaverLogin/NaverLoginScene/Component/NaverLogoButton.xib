@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NaverLogoButton" customModule="NaverLogin" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="168"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vei-HI-EJy">
+                    <rect key="frame" x="0.0" y="79" width="410" height="35"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="NaverLogoImage" imageContentMode="scaleAspectFit"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onNaverLogoButtonClicked:" destination="-1" eventType="touchUpInside" id="GTK-Rh-dAF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Vei-HI-EJy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AZy-iW-20c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vei-HI-EJy" secondAttribute="bottom" constant="20" id="LPY-GE-N75"/>
+                <constraint firstItem="Vei-HI-EJy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="N0h-hv-C9J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vei-HI-EJy" secondAttribute="trailing" id="TR7-RC-ets"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-140.45801526717557" y="251.40845070422537"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NaverLogoImage" width="1280" height="245"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
