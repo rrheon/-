@@ -120,11 +120,12 @@
                     <rect key="frame" x="40" y="109" width="450" height="178"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-a9-WGq">
-                            <rect key="frame" x="0.0" y="0.0" width="450" height="386"/>
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="396"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-0S-2H5">
                                     <rect key="frame" x="10" y="10" width="430" height="376"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     <string key="text">여러분을 환영합니다.
  대지에 북쪽에서 얻어 그 아무 청춘이 까닭입니다. 아스라이 계집애들의 닮은 북간도에 같이 고이 향할 번을 날이 밤 가실 일편단심 대지에 노래였네 꿈꿀 날에 어머님, 강이 께요.
 
@@ -145,7 +146,7 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="HsT-0S-2H5" secondAttribute="trailing" constant="10" id="CYs-8Q-21U"/>
                                 <constraint firstItem="HsT-0S-2H5" firstAttribute="leading" secondItem="fAP-a9-WGq" secondAttribute="leading" constant="10" id="MIu-Sh-rqc"/>
-                                <constraint firstAttribute="bottom" secondItem="HsT-0S-2H5" secondAttribute="bottom" id="VEU-HG-INM"/>
+                                <constraint firstAttribute="bottom" secondItem="HsT-0S-2H5" secondAttribute="bottom" constant="10" id="VEU-HG-INM"/>
                                 <constraint firstItem="HsT-0S-2H5" firstAttribute="top" secondItem="fAP-a9-WGq" secondAttribute="top" constant="10" id="oT1-Ha-1zr"/>
                             </constraints>
                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>

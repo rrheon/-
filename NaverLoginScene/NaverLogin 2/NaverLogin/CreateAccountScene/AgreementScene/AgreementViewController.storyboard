@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKX-zs-nFt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKX-zs-nFt">
                                 <rect key="frame" x="0.0" y="59" width="393" height="659"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KJF-aq-bsR">
@@ -210,11 +210,22 @@
                         <outlet property="agreementAllButton1" destination="z9Q-rA-fcE" id="S7h-uo-hJO"/>
                         <outlet property="agreementStackView" destination="KJF-aq-bsR" id="3C1-f9-emK"/>
                         <outlet property="selectLanguageButton" destination="4zY-IO-4gE" id="MLS-Nq-XMr"/>
+                        <segue destination="DCE-GB-OIH" kind="presentation" identifier="InputUserInfomationViewController" animates="NO" modalPresentationStyle="fullScreen" id="LS1-gi-Qxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-98.473282442748086" y="4.9295774647887329"/>
+        </scene>
+        <!--InputUserInfomationViewController-->
+        <scene sceneID="XgG-oy-9uc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="InputUserInfomationViewController" storyboardName="InputUserInfomationViewController" referencedIdentifier="InputUserInfomationViewController" id="DCE-GB-OIH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="akP-5X-nmZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kM-lw-xGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-104"/>
         </scene>
     </scenes>
     <resources>

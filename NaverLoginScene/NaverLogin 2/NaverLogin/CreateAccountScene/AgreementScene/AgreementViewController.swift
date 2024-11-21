@@ -42,6 +42,28 @@ final class AgreementViewController: UIViewController {
   @IBOutlet weak var agreementAllButton1: UIButton!
   @IBOutlet weak var agreeAllButton: UIButton!
   
+  // 하단 그라데이션
+  private let bottomGradientView = {
+    let view = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.isUserInteractionEnabled = false
+    return view
+  }()
+  
+  private lazy var bottomGradientLayer = {
+    let layer = CAGradientLayer()
+    let color = UIColor.white
+    layer.colors = [
+      color,
+      color.withAlphaComponent(0.4),
+      color.withAlphaComponent(0.7),
+      color.withAlphaComponent(0.0),
+    ].map(\.cgColor)
+    layer.startPoint = CGPoint(x: 0.5, y: 1)
+    layer.endPoint = CGPoint(x: 0.5, y: 0)
+    return layer
+  }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     agreementAllButton1.tintColor = .gray
@@ -49,10 +71,32 @@ final class AgreementViewController: UIViewController {
     settingAgreementButtons()
     settingBottomButtons()  
     setupSelectlanguageButton()
+    
+    setupBottomGradient()
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    bottomGradientLayer.frame = bottomGradientView.bounds
   }
   
   // MARK: - function
   
+  
+  /// 하단 그라데이션 설정
+  private func setupBottomGradient() {
+    guard !view.subviews.contains(bottomGradientView) else { return }
+    view.addSubview(bottomGradientView)
+    view.bringSubviewToFront(bottomGradientView)
+    bottomGradientView.layer.addSublayer(bottomGradientLayer)
+    
+    NSLayoutConstraint.activate([
+      bottomGradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      bottomGradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      bottomGradientView.bottomAnchor.constraint(equalTo: nextButton.topAnchor),
+      bottomGradientView.heightAnchor.constraint(equalToConstant: 40)
+    ])
+  }
   
   /// 언어 선택 버튼 세팅
   private func setupSelectlanguageButton() {
@@ -143,6 +187,7 @@ final class AgreementViewController: UIViewController {
     self.view.addSubview(nextButton)
 
     nextButton.translatesAutoresizingMaskIntoConstraints = false
+    nextButton.loginButtonTapped = onNextButtonClicked
     nextButton.naverLoginButton.backgroundColor = .unActivateNextButtonColor
     nextButton.naverLoginButton.cornerRadius = 8
     nextButton.naverLoginButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
@@ -152,6 +197,12 @@ final class AgreementViewController: UIViewController {
       nextButton.bottomAnchor.constraint(equalTo: bottomViewComponent.topAnchor, constant: -30),
       nextButton.heightAnchor.constraint(equalToConstant: 50)
     ])
+  }
+  
+  
+  /// 다음버튼 터치
+  func onNextButtonClicked(){
+    self.performSegue(withIdentifier: "InputUserInfomationViewController", sender: nil)
   }
   
   

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="609"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="QlL-E5-KIW">
-                                        <rect key="frame" x="0.0" y="30" width="393" height="586"/>
+                                        <rect key="frame" x="0.0" y="30" width="393" height="616"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-gK-Yle" customClass="NaverLogoButton" customModule="NaverLogin" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="8" width="373" height="74"/>
@@ -120,10 +120,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgU-E6-8Fl">
-                                                <rect key="frame" x="10" y="458" width="373" height="120"/>
+                                                <rect key="frame" x="10" y="458" width="373" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="0Wj-iH-SVS"/>
+                                                    <constraint firstAttribute="height" constant="150" id="0Wj-iH-SVS"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -134,7 +134,7 @@
                                     <constraint firstItem="QlL-E5-KIW" firstAttribute="leading" secondItem="NSS-Dw-Y5V" secondAttribute="leading" id="JgG-RX-Opz"/>
                                     <constraint firstItem="QlL-E5-KIW" firstAttribute="width" secondItem="eBb-JW-7tW" secondAttribute="width" id="cLN-Qv-dMm"/>
                                     <constraint firstItem="QlL-E5-KIW" firstAttribute="top" secondItem="NSS-Dw-Y5V" secondAttribute="top" constant="30" id="eY5-rR-3Zr"/>
-                                    <constraint firstItem="QlL-E5-KIW" firstAttribute="bottom" secondItem="NSS-Dw-Y5V" secondAttribute="bottom" id="hTO-xp-Uj5"/>
+                                    <constraint firstItem="QlL-E5-KIW" firstAttribute="bottom" secondItem="NSS-Dw-Y5V" secondAttribute="bottom" constant="-20" id="hTO-xp-Uj5"/>
                                     <constraint firstItem="QlL-E5-KIW" firstAttribute="trailing" secondItem="NSS-Dw-Y5V" secondAttribute="trailing" id="o6F-lV-G40"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="NSS-Dw-Y5V"/>
