@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3xk-TL-MSi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusinsaCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9g-c8-aZl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFA-ng-dh4">
+                                <rect key="frame" x="0.0" y="103" width="393" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-Cs-qoz">
+                                        <rect key="frame" x="10" y="10" width="373" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="오늘은 무진장 아우터 데이">
+                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dss-2l-ITb">
+                                        <rect key="frame" x="358" y="15.999999999999996" width="25" height="23.333333333333332"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dss-2l-ITb" secondAttribute="height" multiplier="1:1" id="hRt-l5-00z"/>
+                                            <constraint firstAttribute="height" constant="25" id="mEP-cg-6fV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yc3-cK-ztI">
+                                        <rect key="frame" x="10" y="65" width="373" height="35"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yc3-cK-ztI" secondAttribute="trailing" constant="10" id="Blo-E4-MYm"/>
+                                    <constraint firstItem="yc3-cK-ztI" firstAttribute="top" secondItem="zjr-Cs-qoz" secondAttribute="bottom" constant="20" id="Ege-1x-kLY"/>
+                                    <constraint firstItem="dss-2l-ITb" firstAttribute="trailing" secondItem="zjr-Cs-qoz" secondAttribute="trailing" id="KcT-yv-Wuc"/>
+                                    <constraint firstItem="zjr-Cs-qoz" firstAttribute="top" secondItem="mFA-ng-dh4" secondAttribute="top" constant="10" id="TpE-iC-Pjo"/>
+                                    <constraint firstItem="yc3-cK-ztI" firstAttribute="leading" secondItem="mFA-ng-dh4" secondAttribute="leading" constant="10" id="Z3Z-09-ZhO"/>
+                                    <constraint firstAttribute="height" constant="100" id="aLb-On-fI1"/>
+                                    <constraint firstAttribute="bottom" secondItem="yc3-cK-ztI" secondAttribute="bottom" constant="0.10000000000000001" id="dkv-kY-AyG"/>
+                                    <constraint firstItem="zjr-Cs-qoz" firstAttribute="leading" secondItem="mFA-ng-dh4" secondAttribute="leading" constant="10" id="jKg-Rw-sDt"/>
+                                    <constraint firstItem="dss-2l-ITb" firstAttribute="centerY" secondItem="zjr-Cs-qoz" secondAttribute="centerY" id="noa-Wk-3oW"/>
+                                    <constraint firstAttribute="trailing" secondItem="zjr-Cs-qoz" secondAttribute="trailing" constant="10" id="rzJ-ye-t34"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4ew-xa-qlg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ew-xa-qlg" firstAttribute="leading" secondItem="mFA-ng-dh4" secondAttribute="leading" id="07q-Zn-QqO"/>
+                            <constraint firstItem="4ew-xa-qlg" firstAttribute="top" secondItem="mFA-ng-dh4" secondAttribute="top" id="9g7-Xc-Qum"/>
+                            <constraint firstItem="mFA-ng-dh4" firstAttribute="trailing" secondItem="4ew-xa-qlg" secondAttribute="trailing" id="Dz0-7o-5oj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aih-Kf-KcW">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="Rvs-VP-U35">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i8k-AL-qnL">
+                                <rect key="frame" x="16" y="0.66666666666666785" width="108" height="42.666666666666657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42.666666666666657" id="osh-Df-9wx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="MUSINSA">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoryStackView" destination="yc3-cK-ztI" id="lko-mv-53Y"/>
+                        <segue destination="FNg-6l-yCp" kind="show" identifier="CartViewController" id="AFC-BS-HeW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.4351145038167" y="-2.1126760563380285"/>
+        </scene>
+        <!--CartViewController-->
+        <scene sceneID="f5v-cO-wcJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CartViewController" storyboardName="CartViewController" referencedIdentifier="CartViewController" id="FNg-6l-yCp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ywf-rV-1jC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oe4-RR-cPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672.5190839694656" y="-88.028169014084511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QbJ-gR-Ptn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3xk-TL-MSi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="isN-3c-duh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eQy-rW-w8U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTo-5o-2w7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.7175572519084" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
