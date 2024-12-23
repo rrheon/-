@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cafe DetailVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CafeDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CafeDetailVC" customModule="week_10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TQ5-4k-eHm">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TQ5-4k-eHm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HWf-gQ-vAq"/>
+                            <constraint firstItem="TQ5-4k-eHm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="N90-5T-9Hd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TQ5-4k-eHm" secondAttribute="bottom" id="Ogz-CW-oYQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TQ5-4k-eHm" secondAttribute="trailing" id="rlu-DR-mYi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTableView" destination="TQ5-4k-eHm" id="YIU-lf-0O1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="8"/>
+        </scene>
+        <!--댓글디테일 vc-->
+        <scene sceneID="rSp-ey-HGQ">
+            <objects>
+                <viewController storyboardIdentifier="CommentDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D1S-FC-HLf" customClass="CommentDetailVC" customModule="week_10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMR-4a-aDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3jz-T8-4fh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="댓글디테일 vc" id="Hpj-4E-KmZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLR-Il-Hfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="8"/>
+        </scene>
+        <!--게시글 디테일 VC-->
+        <scene sceneID="Bg6-oP-YHV">
+            <objects>
+                <viewController storyboardIdentifier="PostDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="15o-X4-BZp" customClass="PostDetailVC" customModule="week_10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bgp-7C-dIu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="BjX-58-PdT">
+                                <rect key="frame" x="121.33333333333333" y="391.66666666666669" width="150.66666666666669" height="93.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMa-xC-2eS">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="현재 게시글삭제"/>
+                                        <connections>
+                                            <action selector="onDeletePostBtnClicked:" destination="15o-X4-BZp" eventType="touchUpInside" id="QpV-uw-B7k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-Mj-qBk">
+                                        <rect key="frame" x="0.0" y="59.333333333333314" width="150.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="새로운 게시글 추가"/>
+                                        <connections>
+                                            <action selector="onAddPostBtnClicked:" destination="15o-X4-BZp" eventType="touchUpInside" id="Oxj-Gi-TVV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yev-Vf-lYl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BjX-58-PdT" firstAttribute="centerY" secondItem="yev-Vf-lYl" secondAttribute="centerY" id="GNP-fB-JFc"/>
+                            <constraint firstItem="BjX-58-PdT" firstAttribute="centerX" secondItem="yev-Vf-lYl" secondAttribute="centerX" id="GbH-SK-Fjb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="게시글 디테일 VC" id="nmb-AW-jtY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6O-AV-jjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

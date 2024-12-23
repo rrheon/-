@@ -13,6 +13,15 @@
 		EE0670112D116D0F0071AD7D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE0670102D116D0F0071AD7D /* Base */; };
 		EE0670132D116D110071AD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0670122D116D110071AD7D /* Assets.xcassets */; };
 		EE0670162D116D110071AD7D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE0670152D116D110071AD7D /* Base */; };
+		EE0670212D116DC40071AD7D /* CafeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06701F2D116DC40071AD7D /* CafeDetailVC.swift */; };
+		EE0670242D116DDC0071AD7D /* CafeDetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0670232D116DDC0071AD7D /* CafeDetailVC.storyboard */; };
+		EE0670262D116E020071AD7D /* CafePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0670252D116E020071AD7D /* CafePostCell.swift */; };
+		EE0670282D116E0B0071AD7D /* CafePostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0670272D116E0B0071AD7D /* CafePostCell.xib */; };
+		EE06702A2D12650C0071AD7D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0670292D12650C0071AD7D /* DummyData.swift */; };
+		EE06702D2D1265CB0071AD7D /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = EE06702C2D1265CB0071AD7D /* Fakery */; };
+		EE0670362D12A1BE0071AD7D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0670352D12A1BE0071AD7D /* Storyboarded.swift */; };
+		EE0670382D12A1E60071AD7D /* CommentDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0670372D12A1E60071AD7D /* CommentDetailVC.swift */; };
+		EE06703A2D12A3B40071AD7D /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0670392D12A3B40071AD7D /* PostDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,14 @@
 		EE0670122D116D110071AD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE0670152D116D110071AD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0670172D116D110071AD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE06701F2D116DC40071AD7D /* CafeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailVC.swift; sourceTree = "<group>"; };
+		EE0670232D116DDC0071AD7D /* CafeDetailVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeDetailVC.storyboard; sourceTree = "<group>"; };
+		EE0670252D116E020071AD7D /* CafePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafePostCell.swift; sourceTree = "<group>"; };
+		EE0670272D116E0B0071AD7D /* CafePostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafePostCell.xib; sourceTree = "<group>"; };
+		EE0670292D12650C0071AD7D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		EE0670352D12A1BE0071AD7D /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		EE0670372D12A1E60071AD7D /* CommentDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDetailVC.swift; sourceTree = "<group>"; };
+		EE0670392D12A3B40071AD7D /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE06702D2D1265CB0071AD7D /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +77,28 @@
 				EE0670092D116D0F0071AD7D /* AppDelegate.swift */,
 				EE06700B2D116D0F0071AD7D /* SceneDelegate.swift */,
 				EE06700D2D116D0F0071AD7D /* ViewController.swift */,
+				EE0670352D12A1BE0071AD7D /* Storyboarded.swift */,
+				EE0670292D12650C0071AD7D /* DummyData.swift */,
 				EE06700F2D116D0F0071AD7D /* Main.storyboard */,
+				EE06702E2D12798A0071AD7D /* CafeDetailScene */,
 				EE0670122D116D110071AD7D /* Assets.xcassets */,
 				EE0670142D116D110071AD7D /* LaunchScreen.storyboard */,
 				EE0670172D116D110071AD7D /* Info.plist */,
 			);
 			path = "week-10";
+			sourceTree = "<group>";
+		};
+		EE06702E2D12798A0071AD7D /* CafeDetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				EE06701F2D116DC40071AD7D /* CafeDetailVC.swift */,
+				EE0670232D116DDC0071AD7D /* CafeDetailVC.storyboard */,
+				EE0670252D116E020071AD7D /* CafePostCell.swift */,
+				EE0670272D116E0B0071AD7D /* CafePostCell.xib */,
+				EE0670372D12A1E60071AD7D /* CommentDetailVC.swift */,
+				EE0670392D12A3B40071AD7D /* PostDetailVC.swift */,
+			);
+			path = CafeDetailScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,9 @@
 			dependencies = (
 			);
 			name = "week-10";
+			packageProductDependencies = (
+				EE06702C2D1265CB0071AD7D /* Fakery */,
+			);
 			productName = "week-10";
 			productReference = EE0670062D116D0F0071AD7D /* week-10.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,9 @@
 				Base,
 			);
 			mainGroup = EE066FFD2D116D0F0071AD7D;
+			packageReferences = (
+				EE06702B2D1265CB0071AD7D /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			productRefGroup = EE0670072D116D0F0071AD7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE0670132D116D110071AD7D /* Assets.xcassets in Resources */,
+				EE0670242D116DDC0071AD7D /* CafeDetailVC.storyboard in Resources */,
+				EE0670282D116E0B0071AD7D /* CafePostCell.xib in Resources */,
 				EE0670162D116D110071AD7D /* Base in Resources */,
 				EE0670112D116D0F0071AD7D /* Base in Resources */,
 			);
@@ -138,9 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE06702A2D12650C0071AD7D /* DummyData.swift in Sources */,
+				EE06703A2D12A3B40071AD7D /* PostDetailVC.swift in Sources */,
+				EE0670212D116DC40071AD7D /* CafeDetailVC.swift in Sources */,
 				EE06700E2D116D0F0071AD7D /* ViewController.swift in Sources */,
 				EE06700A2D116D0F0071AD7D /* AppDelegate.swift in Sources */,
+				EE0670262D116E020071AD7D /* CafePostCell.swift in Sources */,
 				EE06700C2D116D0F0071AD7D /* SceneDelegate.swift in Sources */,
+				EE0670362D12A1BE0071AD7D /* Storyboarded.swift in Sources */,
+				EE0670382D12A1E60071AD7D /* CommentDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE06702B2D1265CB0071AD7D /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE06702C2D1265CB0071AD7D /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE06702B2D1265CB0071AD7D /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE066FFE2D116D0F0071AD7D /* Project object */;
 }
