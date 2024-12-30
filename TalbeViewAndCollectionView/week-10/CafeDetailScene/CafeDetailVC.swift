@@ -11,7 +11,7 @@ class CafeDetailVC: UIViewController {
   
   @IBOutlet weak var myTableView: UITableView!
   
-  var dummyDataList: [DummySection] = DummySection.getDummies()
+  var dummyDataList: [CafeDummyDataSection] = CafeDummyDataSection.getDummies()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,8 +48,8 @@ extension CafeDetailVC: UITableViewDataSource {
       for: indexPath
     ) as? CafePostCell else { return UITableViewCell() }
     
-    let sectionData: DummySection = dummyDataList[indexPath.section]
-    let cellData: DummyData = sectionData.rows[indexPath.row]
+    let sectionData: CafeDummyDataSection = dummyDataList[indexPath.section]
+    let cellData: CafeDummyData = sectionData.rows[indexPath.row]
     
     cell.dummyData = cellData
     cell.commentBtnAction = { postID in
@@ -69,8 +69,8 @@ extension CafeDetailVC: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    let sectionData: DummySection = dummyDataList[indexPath.section]
-    var cellData: DummyData = sectionData.rows[indexPath.row]
+    let sectionData: CafeDummyDataSection = dummyDataList[indexPath.section]
+    var cellData: CafeDummyData = sectionData.rows[indexPath.row]
     print(#fileID, #function, #line," - \(cellData.postTitle)")
     
     // 게시글 선택했을 때 이미 본 게시글로 전환
@@ -88,7 +88,7 @@ extension CafeDetailVC: UITableViewDelegate {
     
     // 게시글 추가 action
     vc.onAddPostAction = {
-      let newData = DummyData.getDummies(1)
+      let newData = CafeDummyData.getDummies(1)
 
       self.dummyDataList[indexPath.section].rows.insert(contentsOf: newData, at: 0)
       print(#fileID, #function, #line," - 추가된 데이터: \(newData)")

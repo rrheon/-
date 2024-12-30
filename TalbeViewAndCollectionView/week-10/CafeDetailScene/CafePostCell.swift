@@ -9,7 +9,7 @@ import UIKit
 
 class CafePostCell: UITableViewCell {
   
-  var dummyData: DummyData? {
+  var dummyData: CafeDummyData? {
     didSet{
       DispatchQueue.main.async {
         self.setupCellData()
@@ -76,7 +76,7 @@ class CafePostCell: UITableViewCell {
   /// 게시글 작성 시간/ 날짜 반환
   /// - Returns:게시글 작성 날짜가 현재 날짜와 같다면 작성 시간 반환, 아니면 날짜반환
   func returnDateData() -> String{
-    let currentDate = DummyData.getTimeAndData().split(separator: " ")
+    let currentDate = CafeDummyData.getTimeAndData().split(separator: " ")
     guard let postedDate = dummyData?.postedDate.split(separator: " ") else { return "" }
     
     return currentDate[0] == postedDate[0] ? String(postedDate[1]) : String(postedDate[0])

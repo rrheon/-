@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-2S-hS8">
-                                <rect key="frame" x="102" y="443.33333333333331" width="189" height="34.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h8d-2S-hS8">
+                                <rect key="frame" x="102" y="421.33333333333331" width="189" height="78.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mON-zg-1zw">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="34.333333333333336"/>
@@ -25,6 +25,14 @@
                                         <buttonConfiguration key="configuration" style="filled" title="네이버 카페 게시글 LIST"/>
                                         <connections>
                                             <segue destination="dMi-ah-myP" kind="show" identifier="CafeDetailVC" id="CTU-Fe-RXt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6U-LE-gBc">
+                                        <rect key="frame" x="0.0" y="44.333333333333371" width="189" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="29CM"/>
+                                        <connections>
+                                            <segue destination="ZQR-fc-eQr" kind="show" identifier="SearchResultVC" id="gf0-Bz-XX2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -52,6 +60,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHI-co-1mv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1901" y="-83"/>
+        </scene>
+        <!--SearchResultVC-->
+        <scene sceneID="9oD-1O-LUv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchResultVC" storyboardName="SearchResultVC" referencedIdentifier="SearchResultVC" id="ZQR-fc-eQr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DcO-Lf-hiZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cY-qt-jMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fZk-2n-iew">
