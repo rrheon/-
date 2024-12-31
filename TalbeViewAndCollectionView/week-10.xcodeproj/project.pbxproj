@@ -27,6 +27,12 @@
 		EE0670692D19575A0071AD7D /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0670682D1957590071AD7D /* SearchResultCell.xib */; };
 		EE06706B2D19576A0071AD7D /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE06706A2D19576A0071AD7D /* SearchResultCell.swift */; };
 		EE6894782D22DFF2001B2F7A /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6894772D22DFF2001B2F7A /* UICollectionView+Ext.swift */; };
+		EE68947B2D22E2BA001B2F7A /* AlaramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68947A2D22E2BA001B2F7A /* AlaramVC.swift */; };
+		EE68947D2D22E2C5001B2F7A /* AlaramVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE68947C2D22E2C5001B2F7A /* AlaramVC.storyboard */; };
+		EE68947F2D22E7BA001B2F7A /* MyOnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE68947E2D22E7BA001B2F7A /* MyOnboardingPageViewController.swift */; };
+		EE6894812D22EAC2001B2F7A /* AlaramComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6894802D22EAC2001B2F7A /* AlaramComponentViewController.swift */; };
+		EE6894832D22EAD0001B2F7A /* AlaramComponentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6894822D22EAD0001B2F7A /* AlaramComponentViewController.storyboard */; };
+		EE6894852D23996B001B2F7A /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6894842D23996B001B2F7A /* UIImage+Ext.swift */; };
 		EED7619D2D1C0B6200D20AF6 /* CustomFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED7619C2D1C0B6200D20AF6 /* CustomFooterView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +58,12 @@
 		EE0670682D1957590071AD7D /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		EE06706A2D19576A0071AD7D /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		EE6894772D22DFF2001B2F7A /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		EE68947A2D22E2BA001B2F7A /* AlaramVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlaramVC.swift; sourceTree = "<group>"; };
+		EE68947C2D22E2C5001B2F7A /* AlaramVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlaramVC.storyboard; sourceTree = "<group>"; };
+		EE68947E2D22E7BA001B2F7A /* MyOnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOnboardingPageViewController.swift; sourceTree = "<group>"; };
+		EE6894802D22EAC2001B2F7A /* AlaramComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlaramComponentViewController.swift; sourceTree = "<group>"; };
+		EE6894822D22EAD0001B2F7A /* AlaramComponentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlaramComponentViewController.storyboard; sourceTree = "<group>"; };
+		EE6894842D23996B001B2F7A /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		EED7619C2D1C0B6200D20AF6 /* CustomFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,10 +103,11 @@
 				EE06700D2D116D0F0071AD7D /* ViewController.swift */,
 				EE0670352D12A1BE0071AD7D /* Storyboarded.swift */,
 				EE0670292D12650C0071AD7D /* DummyData.swift */,
-				EE6894772D22DFF2001B2F7A /* UICollectionView+Ext.swift */,
+				EE6894862D23998E001B2F7A /* Extension */,
 				EE06700F2D116D0F0071AD7D /* Main.storyboard */,
 				EE06702E2D12798A0071AD7D /* CafeDetailScene */,
 				EE0670632D1951E40071AD7D /* 29CM */,
+				EE6894792D22E29D001B2F7A /* BunjangAlaram */,
 				EE0670122D116D110071AD7D /* Assets.xcassets */,
 				EE0670142D116D110071AD7D /* LaunchScreen.storyboard */,
 				EE0670172D116D110071AD7D /* Info.plist */,
@@ -125,6 +138,27 @@
 				EE0670682D1957590071AD7D /* SearchResultCell.xib */,
 			);
 			path = 29CM;
+			sourceTree = "<group>";
+		};
+		EE6894792D22E29D001B2F7A /* BunjangAlaram */ = {
+			isa = PBXGroup;
+			children = (
+				EE68947A2D22E2BA001B2F7A /* AlaramVC.swift */,
+				EE68947C2D22E2C5001B2F7A /* AlaramVC.storyboard */,
+				EE68947E2D22E7BA001B2F7A /* MyOnboardingPageViewController.swift */,
+				EE6894802D22EAC2001B2F7A /* AlaramComponentViewController.swift */,
+				EE6894822D22EAD0001B2F7A /* AlaramComponentViewController.storyboard */,
+			);
+			path = BunjangAlaram;
+			sourceTree = "<group>";
+		};
+		EE6894862D23998E001B2F7A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE6894772D22DFF2001B2F7A /* UICollectionView+Ext.swift */,
+				EE6894842D23996B001B2F7A /* UIImage+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +225,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE68947D2D22E2C5001B2F7A /* AlaramVC.storyboard in Resources */,
 				EE0670132D116D110071AD7D /* Assets.xcassets in Resources */,
+				EE6894832D22EAD0001B2F7A /* AlaramComponentViewController.storyboard in Resources */,
 				EE0670242D116DDC0071AD7D /* CafeDetailVC.storyboard in Resources */,
 				EE0670672D1952270071AD7D /* SearchResultVC.storyboard in Resources */,
 				EE0670282D116E0B0071AD7D /* CafePostCell.xib in Resources */,
@@ -210,11 +246,15 @@
 			files = (
 				EE06702A2D12650C0071AD7D /* DummyData.swift in Sources */,
 				EE06703A2D12A3B40071AD7D /* PostDetailVC.swift in Sources */,
+				EE6894852D23996B001B2F7A /* UIImage+Ext.swift in Sources */,
+				EE6894812D22EAC2001B2F7A /* AlaramComponentViewController.swift in Sources */,
+				EE68947B2D22E2BA001B2F7A /* AlaramVC.swift in Sources */,
 				EE0670212D116DC40071AD7D /* CafeDetailVC.swift in Sources */,
 				EE06700E2D116D0F0071AD7D /* ViewController.swift in Sources */,
 				EE06700A2D116D0F0071AD7D /* AppDelegate.swift in Sources */,
 				EE0670262D116E020071AD7D /* CafePostCell.swift in Sources */,
 				EED7619D2D1C0B6200D20AF6 /* CustomFooterView.swift in Sources */,
+				EE68947F2D22E7BA001B2F7A /* MyOnboardingPageViewController.swift in Sources */,
 				EE06700C2D116D0F0071AD7D /* SceneDelegate.swift in Sources */,
 				EE0670362D12A1BE0071AD7D /* Storyboarded.swift in Sources */,
 				EE0670382D12A1E60071AD7D /* CommentDetailVC.swift in Sources */,
